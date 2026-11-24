@@ -103,9 +103,31 @@ Logo, transkripsiyon harfi **ŋ**'yi işaret olarak kullanır. Sitedeki motifler
 
 ![Motifler](docs/gorseller/motifler.png)
 
+## Nasıl yapıldı?
+
+Proje baştan sona bir yapay zekâ kodlama ajanıyla, her aşamanın sonunda insan denetimiyle kuruldu. Öğrenciler ve aynı yolu izlemek isteyen araştırmacılar için yapılış aşamaları ayrı bir belgede: **[Yapılış aşamaları: model iş akışı](docs/yapilis-asamalari.md)**.
+
+| Aşama | Ne yapılır | Kontrol noktası |
+| --- | --- | --- |
+| 0 · Hazırlık | Ana plan, çalışma kuralları, `.gitignore`, iki depo | Yetki sınırları onaylanır |
+| 1 · Soru ve kapsam | Plan eleştirisi, pilot kararı | “Bitti” ölçütü yazılı |
+| 2 · Kaynaklar ve telif | Lisanslı kaynak tablosu, izin mektubu | Yazılı izin gelmeden site kapalı |
+| 3 · Teknik kararlar | Dil, mimari, “ne zaman değiştiririz” koşulu | Gerekçeli seçim |
+| 4 · Veri ve ölçüm | Katmanlar, kalıcı kimlik, altın liste, kesinlik | Testler geçiyor, bozma denemesi yakalanıyor |
+| 5 · Site ve tasarım | Arama, tanık sayfası, karşılaştırma, logo ve motifler | Bilmeyen biriyle senaryo denemesi |
+| 6 · Yayın ve güvenlik | Docker + nginx, Coolify, Cloudflare, parolalı kayıt | Sınama tablosu: beklenen = gerçek |
+| 7 · Karar kaydı ve hakem | Kararlar, iki dış model hakemi, Latince eşleme | Eleştirilerin kabul/ret tablosu |
+| 8 · Etiketleme ve devir | Etiketleme ekranı, uyuşma ölçümü, Yapılacaklar | İnsan denetimi |
+
+Belgenin sonunda, bu dokuz aşamayı tek komutta toplayan bir **ana istem (master prompt)** yer alır.
+
 ## Durum
 
 Pilot aşaması: doğ-, kėl- ve bėr- fiilleri; 23 cümle ön etiketli, insan denetimi ve iki etiketleyiciyle uyuşma ölçümü sürüyor. Yazı tipleri Crimson Pro ve Lato (SIL Open Font License).
+
+## Lisans
+
+Kod [MIT Lisansı](LICENSE) ile paylaşılır. Kaynak veriler kendi lisanslarına tabidir (UD derlemleri CC BY-SA 4.0; Latince asıllar kamu malı); telifli neşir verisi bu depoda yoktur.
 
 ---
 
