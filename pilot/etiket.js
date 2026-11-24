@@ -78,9 +78,11 @@ function denetle(e) {
 }
 
 function conllu(id, e) {
-  const misc = t => { const m = []; if (t.hal) m.push('YonetilenHal=' + t.hal); if (t.isaret) m.push('YuzeyIsaret=' + t.isaret.replace(/[|\s]/g, '_')); if (t.okuma) m.push('Okuma=' + t.okuma); if (t.not) m.push('Not=' + t.not.replace(/[|\s=]/g, '_')); return m.join('|') || '_'; };
-  return '# sent_id = ' + id + '\n# text = ' + e.sozcukler.map(t => t.form).join(' ') + '\n# kaynak_satirlar = ' + e.kaynak.join(' ') + '\n# etiketleyici = ' + (e.etiketleyici || '?') + '\n# tarih = ' + e.tarih + (e.zaman ? '\n# zaman = ' + e.zaman : '') + '\n# kilavuz = ' + e.kilavuz + '\n' +
-    e.sozcukler.map((t, i) => [i + 1, t.form, t.lemma || '_', t.upos || '_', '_', t.feats || '_', t.head === '' ? '_' : t.head, t.deprel || '_', '_', misc(t)].join('\t')).join('\n') + '\n';
+  const misc = t => { const m = []; if (t.hal) m.push('YonetilenHal=' + t.hal); if (t.isaret) m.push('YuzeyIsaret=' + t.isaret.replace(/[|\s]/g, '_')); if (t.okuma) m.push('Okuma=' + t.okuma); if (t.not) m.push('Not=' + t.not.replace(/[|\s=]/g, '_')); if (t.ekMisc) m.push(...t.ekMisc); return m.join('|') || '_'; };
+  const BILINEN = new Set(['sent_id', 'text', 'kaynak_satirlar', 'etiketleyici', 'tarih', 'zaman', 'kilavuz']);
+  const ek = Object.entries(e.ekMeta || {}).filter(([k]) => !BILINEN.has(k)).map(([k, v]) => '# ' + k + ' = ' + v + '\n').join('');
+  return '# sent_id = ' + id + '\n# text = ' + e.sozcukler.map(t => t.form).join(' ') + '\n# kaynak_satirlar = ' + e.kaynak.join(' ') + '\n# etiketleyici = ' + (e.etiketleyici || '?') + '\n# tarih = ' + e.tarih + (e.zaman ? '\n# zaman = ' + e.zaman : '') + '\n# kilavuz = ' + e.kilavuz + '\n' + ek +
+    e.sozcukler.map((t, i) => [i + 1, t.form, t.lemma || '_', t.upos || '_', t.xpos || '_', t.feats || '_', t.head === '' ? '_' : t.head, t.deprel || '_', t.deps || '_', misc(t)].join('\t')).join('\n') + '\n';
 }
 
 function conlluOku(metin) {
@@ -90,10 +92,12 @@ function conlluOku(metin) {
     for (const l of blok.split('\n')) {
       if (l.startsWith('#')) { const m = l.match(/^#\s*(\S+)\s*=\s*(.*)$/); if (m) meta[m[1]] = m[2]; continue; }
       const c = l.split('\t'); if (c.length < 10 || !/^\d+$/.test(c[0])) continue;
-      const misc = Object.fromEntries((c[9] === '_' ? [] : c[9].split('|')).map(x => x.split('=')));
-      s.push({ form: c[1], lemma: c[2] === '_' ? '' : c[2], upos: c[3] === '_' ? '' : c[3], feats: c[5] === '_' ? '' : c[5], head: c[6] === '_' ? '' : c[6], deprel: c[7] === '_' ? '' : c[7], hal: misc.YonetilenHal || '', isaret: (misc.YuzeyIsaret || '').replace(/_/g, ' '), okuma: misc.Okuma || '', not: (misc.Not || '').replace(/_/g, ' ') });
+      const parca = c[9] === '_' ? [] : c[9].split('|'), TANIDIK = /^(YonetilenHal|YuzeyIsaret|Okuma|Not)=/;
+      const misc = Object.fromEntries(parca.filter(x => TANIDIK.test(x)).map(x => [x.slice(0, x.indexOf('=')), x.slice(x.indexOf('=') + 1)]));
+      const ekMisc = parca.filter(x => !TANIDIK.test(x));
+      s.push({ form: c[1], lemma: c[2] === '_' ? '' : c[2], upos: c[3] === '_' ? '' : c[3], feats: c[5] === '_' ? '' : c[5], head: c[6] === '_' ? '' : c[6], deprel: c[7] === '_' ? '' : c[7], hal: misc.YonetilenHal || '', isaret: (misc.YuzeyIsaret || '').replace(/_/g, ' '), okuma: misc.Okuma || '', not: (misc.Not || '').replace(/_/g, ' '), xpos: c[4] === '_' ? '' : c[4], deps: c[8] === '_' ? '' : c[8], ...(ekMisc.length ? { ekMisc } : {}) });
     }
-    if (meta.sent_id && s.length) out[cumleKimlik(meta.sent_id)] = { kaynak: (meta.kaynak_satirlar || meta.sent_id).split(' ').map(yeniKimlik), metin: meta.text, sozcukler: s, etiketleyici: meta.etiketleyici || '', tarih: meta.tarih || '', zaman: meta.zaman || '', kilavuz: meta.kilavuz || '' };
+    if (meta.sent_id && s.length) out[cumleKimlik(meta.sent_id)] = { kaynak: (meta.kaynak_satirlar || meta.sent_id).split(' ').map(yeniKimlik), metin: meta.text, sozcukler: s, etiketleyici: meta.etiketleyici || '', tarih: meta.tarih || '', zaman: meta.zaman || '', kilavuz: meta.kilavuz || '', ekMeta: meta };
   }
   return out;
 }
@@ -124,10 +128,14 @@ async function esitle() {
   const yerel = tumEtiketler();
   const benim = Object.fromEntries(Object.entries(yerel).filter(([, e]) => sunucu.ad(e.etiketleyici) === ad));
   const uzak = await sunucu.oku(ad + '.conllu');
+  const uzakMetin = Object.keys(uzak).length ? Object.keys(uzak).map(id => conllu(id, uzak[id])).join('\n') : '';
   const son = birlestir(uzak, benim);
   const metin = Object.keys(son).map(id => conllu(id, son[id])).join('\n');
   await sunucu.yaz(ad + '.conllu', metin);
-  await sunucu.yaz(ad + '-yedek-' + new Date().toISOString().slice(0, 10) + '.conllu', metin).catch(() => {});
+  // Günlük yedek yalnız günün ilk kaydında, kayıttan önceki hâlle yazılır; sonraki kayıtlar onu ezmez.
+  const yedek = ad + '-yedek-' + new Date().toISOString().slice(0, 10) + '.conllu';
+  const yedekVar = await fetch(location.origin + '/kayit/' + yedek, { method: 'HEAD', cache: 'no-store' }).then(x => x.ok).catch(() => true);
+  if (!yedekVar) await sunucu.yaz(yedek, uzakMetin || metin).catch(() => {});
   depo.yaz('mh:etiketler', birlestir(yerel, son));
   sunucuDurumYaz('Sunucuya kaydedildi: ' + ad + '.conllu, ' + Object.keys(son).length + ' cümle · ' + new Date().toLocaleTimeString('tr'));
   return son;
@@ -151,9 +159,13 @@ function etiketSayfasi(id, cekildi) {
     }).catch(() => {}).finally(() => { if (location.hash.startsWith('#/etiketle/')) etiketSayfasi(id, true); });
     icerik.innerHTML = '<p class="not">Sunucudaki kayıtlarınıza bakılıyor…</p>'; return;
   }
-  const kayit = kayitli()[id];
-  let e = tumEtiketler()[id] || (kayit ? JSON.parse(JSON.stringify(kayit)) : yeniEtiket(s));
-  const kaynakNotu = !tumEtiketler()[id] && kayit ? 'Depodaki kayıtlı etiket açıldı (' + (kayit.etiketleyici || '?') + '). Değiştirdiğinizde sizin taslağınız olur.' : '';
+  const kayit = kayitli()[id], onIste = /[?&]on=1\b/.test(location.hash);
+  // Kör etiketleme: ön etiket yalnız kayıtlı listeden (?on=1) açılır; tanık sayfasından boş tablo gelir.
+  let e = tumEtiketler()[id] || (kayit && onIste ? JSON.parse(JSON.stringify(kayit)) : yeniEtiket(s));
+  if (!e.ekMeta && kayit && kayit.ekMeta) e.ekMeta = Object.fromEntries(Object.entries(kayit.ekMeta).filter(([k]) => /^latince|^kopya/.test(k)));
+  const kaynakNotu = tumEtiketler()[id] ? '' : kayit && onIste ? 'Depodaki kayıtlı etiket açıldı (' + (kayit.etiketleyici || '?') + '). Değiştirdiğinizde sizin taslağınız olur.' : kayit ? 'Bu cümlenin kayıtlı bir ön etiketi var; kör etiketleme için gösterilmiyor.' : '';
+  const lat = e.ekMeta || {};
+  const latinceKutu = lat.latince ? '<div class="not"><b>Latince:</b> ' + isle(lat.latince) + (lat.latince_kaynak ? ' · ' + isle(lat.latince_kaynak) : '') + (lat.kopya_supesi ? ' · kopya şüphesi: ' + isle(lat.kopya_supesi) : '') + '</div>' : '';
   const kaydet = () => { e.etiketleyici = etiketleyici(); e.zaman = new Date().toISOString(); e.tarih = e.zaman.slice(0, 10); etiketKaydet(id, e); durum(); sunucuyaGonder(); };
   function satirlarEkle(yon) {
     const uc = kimlik.get(yon < 0 ? e.kaynak[0] : e.kaynak[e.kaynak.length - 1]);
@@ -179,7 +191,7 @@ function etiketSayfasi(id, cekildi) {
       '<div class="alt ust-bosluk"><button class="dugme ikincil" id="once">+ önceki satır</button><button class="dugme ikincil" id="sonra">+ sonraki satır</button>' +
       '<label class="not">Etiketleyici <input id="etkad" value="' + isle(etiketleyici()) + '" placeholder="ad soyad" size="14"></label>' +
       '<button class="dugme ikincil" id="sifirla">Sıfırla</button><button class="dugme" id="disa">Bu cümleyi CoNLL-U indir</button></div>' +
-      (kaynakNotu ? '<div class="uyari">' + isle(kaynakNotu) + '</div>' : '') + '<p class="not">Cümle sınırı OCR satırı değildir: gerekirse önceki/sonraki satırı ekleyin (karar K8). Yararlanıcı yönelme hâli için K4, -(I)p tur- için K1. <span id="kaydedildi"></span> <span id="sunucu-durum" class="not">' + isle(sunucuDurum) + '</span></p>' +
+      (kaynakNotu ? '<div class="uyari">' + isle(kaynakNotu) + '</div>' : '') + latinceKutu + '<p class="not">Cümle sınırı OCR satırı değildir: gerekirse önceki/sonraki satırı ekleyin (karar K8). Yararlanıcı yönelme hâli için K4, -(I)p tur- için K1. <span id="kaydedildi"></span> <span id="sunucu-durum" class="not">' + isle(sunucuDurum) + '</span></p>' +
       '<div class="tablo-sar"><table class="etiket-tablo"><thead><tr><th>#</th><th>Biçim</th><th>Madde başı</th><th>Tür</th><th>Özellikler</th><th>Baş</th><th>İlişki</th><th>Yönetilen hâl</th><th>Yüzey işareti</th><th>Okuma</th><th>Not</th></tr></thead><tbody>' +
       e.sozcukler.map((t, i) => '<tr><td>' + (i + 1) + '</td><td><input data-i="' + i + '" data-a="form" value="' + isle(t.form) + '" size="9"></td><td><input data-i="' + i + '" data-a="lemma" value="' + isle(t.lemma) + '" size="7" placeholder="ör. tuv"></td>' +
         '<td>' + sec('upos', [''].concat(UPOS), t.upos, i) + '</td><td><input data-i="' + i + '" data-a="feats" value="' + isle(t.feats) + '" size="18" list="ozellik" placeholder="Case=Abl|…"></td><td>' + basSec(t, i) + '</td><td>' + sec('deprel', [''].concat(DEPREL), t.deprel, i) + '</td>' +
@@ -212,7 +224,7 @@ function etiketlerSayfasi(cekildi) {
     '<h2 class="baslik-kucuk" style="margin-top:20px">Taslaklar</h2>' +
     (idler.length ? '<div class="kartlar">' + idler.map(id => { const e = t[id], u = denetle(e); return '<a class="kart" href="#/etiketle/' + id + '"><div class="kip-metin">' + isle(e.sozcukler.map(x => x.form).join(' ')) + '</div><div class="alt"><span class="cip' + (u.length ? '' : ' vurgu') + '">' + (u.length ? u.length + ' uyarı' : 'geçerli ağaç') + '</span><span class="cip">' + isle(e.etiketleyici || 'etiketleyici yok') + '</span><span class="cip">' + id + '</span></div></a>'; }).join('') + '</div>' : '<p class="not">Henüz taslak yok.</p>') +
     '<h2 class="baslik-kucuk" style="margin-top:20px">Depodaki kayıtlı etiketler (' + kayIdler.length + ')</h2><p class="not">Ön etiketli küme: doğ-/töre- (17) ve bėr- (6) tanıklarını içeren cümleler; her cümlenin başında Latince karşılığı ve kopya şüphesi var. Etiketleyicisi “ön etiket” olanlar denetlenmemiştir; açıp düzeltin; değiştirdiğiniz cümle adınıza sunucuya kaydedilir.</p><div class="kartlar">' +
-    kayIdler.map(id => { const e = kay[id], u = denetle(e); return '<a class="kart" href="#/etiketle/' + id + '"><div class="kip-metin">' + isle(e.sozcukler.map(x => x.form).join(' ')) + '</div><div class="alt"><span class="cip">' + isle(e.etiketleyici || '?') + '</span><span class="cip' + (u.length ? '' : ' vurgu') + '">' + (u.length ? u.length + ' uyarı' : 'geçerli ağaç') + '</span>' + (t[id] ? '<span class="cip vurgu">sizin taslağınız var</span>' : '') + '</div></a>'; }).join('') + '</div>' +
+    kayIdler.map(id => { const e = kay[id], u = denetle(e); return '<a class="kart" href="#/etiketle/' + id + '?on=1"><div class="kip-metin">' + isle(e.sozcukler.map(x => x.form).join(' ')) + '</div><div class="alt"><span class="cip">' + isle(e.etiketleyici || '?') + '</span><span class="cip' + (u.length ? '' : ' vurgu') + '">' + (u.length ? u.length + ' uyarı' : 'geçerli ağaç') + '</span>' + (t[id] ? '<span class="cip vurgu">sizin taslağınız var</span>' : '') + '</div></a>'; }).join('') + '</div>' +
     '<h2 class="baslik-kucuk" style="margin-top:20px">Sunucudaki etiketleyiciler</h2><div id="sunucu-liste" class="not">Yükleniyor…</div>' +
     '<h2 class="baslik-kucuk" style="margin-top:20px">Uyuşma (iki etiketleyici)</h2><p class="not">Sunucudaki iki etiketleyiciyi seçin; aynı <code>sent_id</code> ve aynı sözcük bölümlemesine sahip cümleler karşılaştırılır.</p>' +
     '<div class="alt"><select id="s1"></select><select id="s2"></select><button class="dugme" id="solc">Ölç</button></div>' +

@@ -110,8 +110,12 @@ function sonuclar(sorgu) {
 
 function udCerceve(ud, tok) {
   return ud.filter(t => t[5] === tok[0] && !['punct', 'aux', 'cop', 'mark', 'cc', 'det'].includes(t[6])).map(t => {
+    // UD'de ilgeç fiile değil, yönettiği ada `case` ile bağlanır: ilgeçli öbekte hâli fiil değil ilgeç yönetir.
+    const ilgec = ud.find(c => c[5] === t[0] && c[6] === 'case' && c[3] === 'ADP');
+    if (ilgec) return { s: t[1], r: t[6], h: '', tur: 'ilgeç öbeği (' + ilgec[2] + ')' };
     const h = (t[4].match(/Case=(\w+)/) || [])[1] || '';
-    return { s: t[1], r: t[6], h, tur: t[3] === 'VERB' || /VerbForm/.test(t[4]) ? 'fiilimsi öbeği' : t[3] === 'ADP' ? 'ilgeç' : 'ad öbeği' };
+    const tur = /VerbForm=/.test(t[4]) ? 'fiilimsi öbeği' : t[3] === 'VERB' ? 'çekimli yan cümle' : t[3] === 'ADP' ? 'ilgeç' : 'ad öbeği';
+    return { s: t[1], r: t[6], h, tur };
   });
 }
 function bounSayfasi(s, sorgu) {
@@ -165,7 +169,7 @@ function karsilastirSayfasi(p) {
     if (s.d !== 'cc2' || s.k !== 'metin') continue;
     if (s.tur === 'sozluk' && !sozlukDahil) { sozlukCikan++; continue; }  // sözlük maddeleri tam cümle değil: varsayılan olarak paydaya girmez
     if (s.tur === 'diger') continue;
-    const t = kucuk(s.ct === 'satır içi' ? s.t.split('"')[0] : s.t); reK.lastIndex = 0;
+    const t = kucuk(s.ct === 'satır içi' ? s.t.replace(/"[^"]*"/g, ' ') : s.t); reK.lastIndex = 0;
     for (const m of t.matchAll(reK)) {
       const soz = m[0];
       if (haricMi(soz, haric)) continue;
@@ -212,7 +216,7 @@ function karsilastirSayfasi(p) {
         if (durBas) cerAdaylari = cerAdaylari.concat(udCerceve(s.ud, durBas).filter(b => b.s !== t[1]));
       }
       const cer = cerAdaylari.filter(b => ['obj', 'obl', 'iobj', 'ccomp', 'xcomp'].includes(b.r));
-      for (const b of cer) { const k = b.tur + ' · ' + (b.h ? (HAL_AD[b.h] || b.h) : b.r); hal[k] = (hal[k] || 0) + 1; }
+      for (const b of cer) { const k = b.tur + ' · ' + (b.h ? (HAL_AD[b.h] || b.h) : b.tur.startsWith('ilgeç öbeği') ? 'hâli ilgeç yönetir' : b.r); hal[k] = (hal[k] || 0) + 1; }
       bn.push({ s, soz: t[1], konum, cer });
     }
   }
@@ -237,8 +241,9 @@ function karsilastirSayfasi(p) {
     KONUM_SIRA.map(k => { const a = say(cc, k), c = say(tk, k), b = say(bn, k); return (a || b || c) ? '<tr><td>' + (KONUM_AD[k] || 'belirsiz (elle bakılmalı)') + '</td><td class="sayi"><a href="#" data-l="cc:' + k + '">' + a + '</a>' + oran(a, cc.length, "cc") + yogun(cc, k) + '</td><td class="sayi"><a href="#" data-l="tk:' + k + '">' + c + '</a>' + oran(c, tk.length, "tk") + yogun(tk, k) + '</td><td class="sayi"><a href="#" data-l="bn:' + k + '">' + b + '</a>' + oran(b, bn.length, "bn") + yogun(bn, k) + '</td></tr>' : ''; }).join('') +
     '</tbody></table></div>';
   const halSira = Object.entries(hal).sort((x, y) => y[1] - x[1]);
+  const halTop = halSira.reduce((a, [, n]) => a + n, 0);  // oran tümleç sayısına göre (ORKESTRATOR kuralı), kullanım sayısına göre değil
   h += '<h2 class="baslik-kucuk" style="margin-top:20px">Tümleç türü ve hâli (yalnız BOUN; CC II için etiketleme bekleniyor)</h2>' +
-    (halSira.length ? '<div class="tablo-sar"><table class="karsi"><thead><tr><th>Tümleç</th><th>BOUN</th></tr></thead><tbody>' + halSira.map(([k, n]) => '<tr><td>' + isle(k) + '</td><td class="sayi">' + n + oran(n, bn.length, "bn") + '</td></tr>').join('') + '</tbody></table></div>' : '<p class="not">Tümleç yok.</p>') +
+    (halSira.length ? '<div class="tablo-sar"><table class="karsi"><thead><tr><th>Tümleç</th><th>BOUN</th></tr></thead><tbody>' + halSira.map(([k, n]) => '<tr><td>' + isle(k) + '</td><td class="sayi">' + n + oran(n, halTop, "bn") + '</td></tr>').join('') + '</tbody></table></div>' : '<p class="not">Tümleç yok.</p>') +
     '<div id="liste"></div>';
   icerik.innerHTML = h;
   document.getElementById('kform').onsubmit = e => { e.preventDefault(); const f = new FormData(e.target); location.hash = '#/karsilastir?' + new URLSearchParams([...f.entries()]); };
@@ -264,15 +269,22 @@ function ttlSayfasi(s, sorgu) {
     '<h2>Kaynak</h2><dl class="kunye"><dt>Derlem</dt><dd>' + isle(DERLEM[s.d].ad) + ' · ' + isle(DERLEM[s.d].donem) + '</dd><dt>Tür</dt><dd>' + isle(DERLEM[s.d].tur) + '</dd><dt>Kitap</dt><dd>' + isle(DERLEM[s.d].kunye) + '</dd><dt>Sayfa</dt><dd>kitap s. ' + isle(s.ks) + ' · PDF s. ' + s.ps + '</dd><dt>Not</dt><dd>Sayfa görüntülerinden elle çevriyazıya aktarıldı; [?] belirsiz okuma. Asıl kaynak neşre göre denetlenmeli.</dd></dl>' +
     '<p class="ust-bosluk"><a class="dugme" href="#/etiketle/' + s.id + '">Bu satırı UD ile etiketle</a></p>' +
     '<h2>Kalıcı adres</h2><div class="adres"><input readonly value="' + isle(adres) + '" aria-label="Kalıcı adres"><button id="kopyala">Kopyala</button></div></article>' +
-    '<figure class="kart sayfa-gorsel"><img alt="Ders kitabı sayfası, kitap s. ' + isle(s.ks) + '" src="veri/ttl/s' + String(s.ps).padStart(3, '0') + '.jpg"><figcaption class="not">TTL kitap s. ' + isle(s.ks) + '</figcaption></figure></div>';
-  const img = document.querySelector('.sayfa-gorsel img'); img.onclick = e => window.open(e.target.src, '_blank'); img.onerror = () => img.closest('figure').remove();
+    '<p class="not">Ders kitabının sayfa görüntüsü telif nedeniyle sitede gösterilmez.</p></div>';
   document.getElementById('kopyala').onclick = async e => { try { await navigator.clipboard.writeText(adres); e.target.textContent = 'Kopyalandı'; } catch { document.querySelector('.adres input').select(); } };
 }
 
 // Makaleye hazır atıf: Kıpçakça metin (NFC), yazma yaprağı, neşir sayfası, kalıcı adres.
+// Altın listelerde elle doğrulanmış yaprak/satır (ör. 72a/13-14); yoksa yalnız bölümün yaprak aralığı bilinir.
+let _altinYer = null;
+function altinYer(id) {
+  if (!_altinYer) { _altinYer = new Map(); for (const a of (V.altin || []).concat(V.altin_ber || [], V.altin_kel || [])) if (a.satir && a.yer) for (const k of a.satir.split(',')) _altinYer.set(k.trim(), a.yer); }
+  return _altinYer.get(id);
+}
 function atifMetni(s, adres) {
-  const yer = (s.b || s.yp || '').replace(/\s*:\s*/, ': ');  // yaprak (bölüm aralığı); satır numarası neşir metin sayfalarında basılı değil
-  const sayfa = sayfaEtiketi(s).replace(/^kitap s\.\s*/, '');
+  const kesin = altinYer(s.id), aralik = (s.b || s.yp || '').replace(/\s*:\s*/, ': ');
+  const yer = kesin || (aralik ? 'yaprak aralığı ' + aralik : '');
+  const tek = /^cc2\.(\d{3})[ab]\./.exec(s.id);  // kimlikteki kitap sayfası tekildir
+  const sayfa = tek ? tek[1] : sayfaEtiketi(s).replace(/^kitap s\.\s*/, '');
   return (s.t + ' (Codex Cumanicus II' + (yer ? ', ' + yer : '') + '; Argunşah & Güner 2015: ' + sayfa + ') ' + adres).normalize('NFC');
 }
 // --- Madde başı: #/madde/<doğ|gel|ver> · doğrulanmış tanıklar + gerekçesiyle dışlanan benzerler + CSV
@@ -384,9 +396,27 @@ function yapilacaklarSayfasi() {
 }
 
 // --- Yönlendirme: #/  ·  #/ara?q=…  ·  #/tanik/<kimlik>?q=…  ·  #/altin
+// UD BOUN (~10 MB) ilk açılışta yüklenmez; arama, karşılaştırma ya da BOUN tanığı açılınca bir kez çekilir.
+let bounDurum = 'yok';
+function bounGerekli(yol, p) {
+  if (/^\/(tanik|etiketle)\//.test(yol)) return /boun-/.test(yol);
+  return yol.startsWith('/karsilastir') || (!!p.get('q') && !/^\/(altin|etiket|yapilacaklar|madde)/.test(yol));
+}
+function bounYukle() {
+  bounDurum = 'yukleniyor';
+  const el = document.createElement('script');
+  el.src = 'veri/boun.js?v=' + (document.querySelector('script[src^="app.js"]').src.split('v=')[1] || '');
+  el.onload = () => { for (const s of V.satirlar) if (s.d === 'boun' && !kimlik.has(s.id)) kimlik.set(s.id, s); bounDurum = 'hazir'; yonlendir(); };
+  el.onerror = () => { bounDurum = 'hata'; yonlendir(); };
+  document.body.appendChild(el);
+}
 function yonlendir() {
   const [yol, sorgu = ''] = location.hash.slice(1).split('?');
   const p = new URLSearchParams(sorgu);
+  if (bounDurum !== 'hazir' && bounDurum !== 'hata' && bounGerekli(yol, p)) {
+    if (bounDurum === 'yok') bounYukle();
+    icerik.innerHTML = '<p class="not">Çağdaş Türkçe derlemi (UD BOUN) yükleniyor…</p>'; return;
+  }
   derlem = DERLEM[p.get('d')] ? p.get('d') : 'hepsi';
   kip = p.get('kip') === 'tam' ? 'tam' : 'gevsek'; kipGoster();
   document.getElementById('basta').checked = p.get('bas') !== '0';

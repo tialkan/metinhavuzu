@@ -50,3 +50,9 @@ Karar: *bile* `case`, bağlı ad `obl`; `YuzeyIsaret=bile`.
 
 ### K8. Cümle sınırı
 OCR satırı cümle değildir. Etiketleme birimi editörün noktalamasına göre cümledir; ilahilerde kıta, kıta içinde noktalı virgül/nokta. Sitede satır, önceki/sonraki satırlarla birleştirilerek cümle kurulur; `# kaynak_satirlar =` ile kayıt altına alınır.
+
+## K9 · Hitap ve ünlemlerin kökü (*Ave*, *Ė*)
+**Karar:** Cümlede bağımsız çekimli bir ana yüklem varsa *Ave* / *Ė* `discourse` olarak o yükleme bağlanır; kök yüklemdir. Bağımsız ana yüklem yoksa (satırın tamamı *Ave*'ye bağlı ilgi cümlesi ya da yönelme tümleci: *Ave, kimge … övretmiş*; *Ave saa kim …*) *Ave* kök kalır. Bu, UD'nin "yüklemi olmayan cümlede kök en önemli öğedir" ilkesine uyar.
+**Tanıklar:** kök yüklem: cc2.385a.09 (*yėri … bėrdi*), cc2.386a.07 (*yėr-sėn … kovangay*), cc2.385a.13 (*tėydi*); *Ave* kök: cc2.386a.28, cc2.381a.31.
+**BOUN'dan sapma:** Yok.
+**Gerekçe:** Dış hakem incelemesi (2026-11-24) aynı ilahinin kıtalarında tutarsız kök seçimini saptadı; öneri olan "ünlem hiçbir zaman kök olamaz" kuralı yüklemsiz kıtalarda UD'ye aykırı olacağı için sınırlı biçimde kabul edildi.

@@ -29,6 +29,17 @@ KIPCAK_HARF = set("ėŋḫĖŊḪ")
 BOLUM_RE = re.compile(r"^\d{2}[ab][\s:/-]")  # ör. 61b/1-11, 73a: 6-19
 YAPRAK_RE = re.compile(r"^(\d{2}[ab])\b")
 BASLIK_RE = re.compile(r"^\d{1,2}\.\s+[A-ZÇĞİÖŞÜ][\w'’]+.*\s\S+")  # ör. "9. Meleğin çobana ..."; sözlük maddeleri küçük harfle başlar
+# Genel kalıba uymayan tek sözcüklü ya da ŋ içeren bölüm başlıkları (neşir içindekiler listesinden doğrulandı).
+BASLIK_EK = re.compile(r"^(6\. Bilmeceler|25\. Atasözleri|29\. İlahi:*|22\. aŋla- fiilinin çekimleri)\s*$")
+
+
+def baslik_mi(t):
+    return bool(BASLIK_EK.match(t)) or (bool(BASLIK_RE.match(t)) and not kipcak_mi(t) and t.count('"') == 0)
+
+
+def baslik_temizle(t):
+    """Başlığa yapışık dipnot üst-indis rakamını ve fazla iki noktayı siler: 'kurtarıcımız28' → 'kurtarıcımız'."""
+    return re.sub(r"(?<=[a-zçğıöşüA-ZÇĞİÖŞÜ])\d{1,2}$", "", t.strip()).rstrip(":").strip()
 
 
 KIMLIK = KOK.parent / "kimlik"
@@ -126,7 +137,11 @@ def kitap_sayfalari(satirlar):
 def metin_turu(baslik, yaprak):
     """CC II bölüm başlığından metin türü: karşılaştırmada sözlük maddeleri tam cümle olmadığı için ayrı tutulur."""
     b = baslik.replace("İ", "i").replace("I", "ı").lower()  # Türkçe küçük harf (İ → i, I → ı)
-    if "sözler" in b or "gramer" in b or "bir cümle" in b:
+    if "atasöz" in b:
+        return "atasozu"
+    if "bilmece" in b:
+        return "bilmece"
+    if "sözler" in b or "gramer" in b or "bir cümle" in b or "çekimleri" in b:
         return "bilmece" if yaprak in ("60a", "60b") else "sozluk"
     if "ilahi" in b or "ave maria" in b:
         return "ilahi"
@@ -327,6 +342,12 @@ def main():
                     ham.insert(ham.index(once) + 1, yeni)
                 else:
                     print("UYARI: düzeltme uygulanamadı", d)
+            elif d["islem"] == "degistir":  # satırın tamamı yeni_metin olur (onceki_satir_baslangici = düzeltilecek satırın başı)
+                hedef = next((x for x in ham if x["t"].startswith(d["onceki_satir_baslangici"])), None)
+                if hedef:
+                    hedef.update(t=nfc(d["yeni_metin"]), duzeltme=d["gerekce"])
+                else:
+                    print("UYARI: düzeltme uygulanamadı", d)
         govde = [s for s in ham if 55 < s["y"] < 645 and not re.fullmatch(r"\d{3}", s["t"])
                  and not re.match(r"^(Codex Cumanicus|Prof\. Dr\. Mustafa)", s["t"])]
         if govde:
@@ -378,8 +399,8 @@ def main():
     for s in sorted(tum, key=lambda s: (s["pdf"], s["yari"], s["y"])):  # başlıklar ortalı olduğundan sütuna bakmadan
         if s["pdf"] in dizin:
             continue
-        if BASLIK_RE.match(s["t"]) and not kipcak_mi(s["t"]) and s["t"].count('"') == 0:
-            baslik = s["t"]
+        if baslik_mi(s["t"]):
+            baslik = baslik_temizle(s["t"])
         if BOLUM_RE.match(s["t"] + " ") and len(s["t"]) < 25:
             bolum, s["bolum_satiri"] = s["t"], True
             yaprak = YAPRAK_RE.match(s["t"]).group(1)
@@ -430,7 +451,7 @@ def main():
         grup = list(grup)
         paragraflar, par = [], []
         for s in grup:
-            if BASLIK_RE.match(s["t"]) and not kipcak_mi(s["t"]):
+            if baslik_mi(s["t"]):
                 continue
             if par and s["girinti"]:
                 paragraflar.append(par); par = []
@@ -473,6 +494,10 @@ def main():
              "tur": metin_turu(s.get("baslik", ""), s.get("yaprak", ""))}
         if s["dipnot"]:
             k["k"] = "dipnot"
+        elif k["k"] == "metin" and re.fullmatch(r"\d{1,3}\.?", s["t"].strip()):
+            k["k"] = "kita_no"  # tek başına kıta numarası: cümleye sözcük olarak girmesin
+        elif k["k"] == "metin" and k["tur"] == "diger" and s["pdf"] <= 2:
+            k["k"] = "kunye"  # kitabın iç kapak / künye satırları
         elif re.search(r"\b(yazılmıştır|biçiminde|okunmalıdır|olmalıdır|okunmuştur)\b", s["t"]):
             k["k"] = "not"  # editörün metin içi açıklaması
         elif s.get("yan_ceviri"):

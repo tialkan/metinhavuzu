@@ -64,3 +64,23 @@ Projede kullanımı: doğ-/kėl-/bėr- fiillerinin CC I'deki Latince karşılık
 - Sonuç (s. 342–346): devrik yapı ve tamlama içine öge girmesi yaygın; tez bunu yazarların Kıpçakçayı iyi bilmemesine bağlıyor. Latince kaynak karşılaştırması yapılmamış — bizim kalk eşlemesi alternatif açıklama sunuyor.
 - Yükleme eki almamış belirtili nesne ve yer tamlayıcısı ekli sebep/zaman zarfları saptanmış: `YonetilenHal` kararları için tanık listesi.
 - Kimlik bağlantısı: `pilot/veri/tanik/unsal2019.tsv` (özel veri deposu; tez alıntıları telifli). 2622 örnekten 1721'i, 656 ayrı satır kimliğine metin benzerliğiyle (harf üçlüsü, aynı yaprak içinde, eşik 0,5) bağlandı; 1420'si tam eşleşme. Altın tanıkların karşılığı: doğ- 24/36, kėl- 25/37, bėr- 17/24.
+
+### Karaşlar 2012 — Codex Cumanicus'ta eylem
+KARAŞLAR, M. Selda (2012). *Codex Cumanicus'ta Eylem*. Doktora tezi, Yıldız Teknik Üniversitesi. YÖK Tez Merkezi, PDF açık, 497 s.
+- Söz dizimi değil, eylem söz varlığı ve yapımı (kök eylemler, ad/eylemden eylem türeten ekler). Temel: Grønbech 1942 *Komanisches Wörterbuch*; yöntem Erdal *OTWF*, Berta 1996.
+- Örnek adresleri Grønbech'in sayfa, satır göndermeleri (ör. "126, 25"); yaprak-satır değil → kimliklere doğrudan bağlanamaz, Grønbech derişimi gerekir.
+- *toġ-/tov-/tuv-* tek eylem olarak ele alınmış (s. ~150): Ünal 2010 ile birlikte doğ- altın listesinin tek madde kararını destekler.
+- *bėr-* yardımcı eylem olarak "hızlı eylem" (Zajączkowski 1961 aktarımı); *aça bėr-* vb. Ünsal 2019'un "tezlik" yorumuyla uyumlu.
+- *tutup tur-* 'yönetmek' sözlükselleşmiş birleşik eylem olarak verilmiş: `Periphrasis=Ip_tur` için sözlükselleşmiş örneklerin ayrılması gerekebilir.
+
+### YÖK tezleri taraması (2026-11-24, alt ajanlarla; sayfalar PDF sayfası, basılı numara birkaç sayfa kayabilir)
+- **Taş, Yasemin (2025).** *Ermeni Harfli Kıpçak Türkçesinde Söz Dizimi.* Doktora, Erciyes. -(I)p tur- = **süreklilik** tasvir fiili (§2.10.3.1.7, PDF s. 308); tezlik ayrı ve yalnız -(y)I + ber- (s. 309). Devriklik "bir hayli fazla", Ermenice/Slavca etkisine bağlanıyor (PDF s. 24, 113, 341 vd.).
+- **Nizam, Onur (2022).** *Asıl Memlûk Kıpçak Türkçesinin Söz Dizimi.* Doktora, ESOGÜ. Devrik tümce eylem tümcelerinde daha sık; neden çeviri eserlerde Arapça kaynak dil etkisi (PDF s. 22–23, 735).
+- **Aktepe, Yunus (2025).** *Memlûk Kıpçak Türkçesinde Fiil-Tamlayıcı İlişkisi.* Doktora, Erzincan BY. ~2000 fiillik istem sözlüğü. *bér-* alıcısı yönelme (+A/+GA: *kisve bérgey on miskīnge*, İM 383a/1; PDF s. 227–232). *toġ-* yalın + yönelme (İM 48a/4; PDF s. 702).
+- **Tokmak, Gülderen (2015).** *Ermeni Harfli Kıpçakça Zebur'da Fiil-Tamlayıcı İlişkisi.* YL, AİBÜ. *toγ-* 'doğmak' +DA; 'doğurmak' +DAn kaynak (*χoynumdan … toγdum seni*, AQP 110/3; PDF s. 222). *ber-* alıcı +A/+GA/+ŋAr (PDF s. 70).
+- **Güler, Emine (2018).** *Tarihî Kıpçak Türkçesinde Tasarlama Kiplerinin İşlevleri.* Doktora, AYBÜ. CC'ye özgü 1. çokluk -AlI; *Mariamdan togdı* (CC 61b) ayrılma kaynağı (s. ≈132). CC atıf sistemi karışık.
+- **Albayrak, Ünal (2019).** *Tarihî Kıpçak Türkçesinde Kelime Grupları.* YL, Ordu. Tasvir fiilleri s. 287–290; -(I)p tur- örnekleri CCII 73a/6, 74b/3-4 (*atadan tuvup turur*), 74b/6-8, 71a/9; çeviriler sürerlik ya da perfekt. "-ıveren" çevirisi yalnız -A tur-/-p turgan sıfat-fiillerinde (69a/17, 60a/1, 69a/22).
+- **Salan, Musa (2016).** *Codex Cumanicus ve Ermeni Harfli Kıpçak Türkçesinde Fiil Yapımı.* Doktora, Gazi. Söz dizimi yok; *toġur-/tuvur-* tek madde (s. ≈250), *keltür-* < *kel-* (s. 480). Grønbech 1942 göndermeli.
+- **Kapalı:** Karabacak, Merve (2026). *Codex Cumanicus'ta Kılınış.* YL, Hacı Bayram Veli; yazar 25.12.2026'ya kadar kısıtladı.
+
+**Proje kararlarına etkisi:** (a) *doğ-* + ayrılma kaynağı CC II'de destekleniyor (Güler, Albayrak); Ermeni harfli ve Memlûk metinlerinde 'doğmak' anlamında bulunma/yönelme da var, ablatif zorunlu değil. (b) *bėr-* alıcısı yönelme: Aktepe ve Tokmak açıkça destekliyor. (c) -(I)p tur-: Taş süreklilik, Albayrak verisi sürerlik/perfekt; tezlik yorumu (Ünsal) yalnız -A tur- ve sıfat-fiil çevirilerine dayanıyor → K1'deki `Periphrasis=Ip_tur` ayrı işaretlemesi korunur. Hiçbir tez Latince kalk tartışması yapmıyor; devrikliği kaynak dil etkisine bağlayan Taş ve Nizam, bizim Latince eşleme yaklaşımına koşut.

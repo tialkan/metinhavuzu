@@ -125,7 +125,7 @@
 
 # sent_id = cc2.389a.27
 # text = Sövünç bizge bolup turur , dünyege tirilik bėrilip turur , Kristus bizge togup turur arı kız Mariamdan .
-# kaynak_satirlar = cc2.389a.25 cc2.389a.26 cc2.389a.27 cc2.389a.23
+# kaynak_satirlar = cc2.389a.25 cc2.389a.26 cc2.389a.27 cc2.389a.28
 # etiketleyici = Claude (ön etiket, denetlenmedi)
 # tarih = 2026-11-24
 # kilavuz = 0.2
@@ -265,7 +265,7 @@
 18	.	.	PUNCT	_	_	14	punct	_	Okuma=nesir
 
 # sent_id = cc2.386a.28
-# text = Ave , kimge yaş yaşından us övretmiş Tėŋri tuvgan söz kim anıŋ köp taŋlarm ayta bilip-sėn barçasın .
+# text = Ave , kimge yaş yaşından us övretmiş Tėŋri tuvgan söz kim anıŋ köp taŋların ayta bilip-sėn barçasın .
 # kaynak_satirlar = cc2.386a.27 cc2.386a.28 cc2.386a.29 cc2.386a.30
 # etiketleyici = Claude (ön etiket, denetlenmedi)
 # tarih = 2026-11-24
@@ -287,7 +287,7 @@
 11	kim	kim	SCONJ	_	_	16	mark	_	Okuma=nesir|Not=K5_açık
 12	anıŋ	ol	PRON	_	Case=Gen|Number=Sing|Person=3	14	nmod:poss	_	Okuma=nesir
 13	köp	köp	ADJ	_	_	14	amod	_	Okuma=nesir
-14	taŋlarm	taŋ	NOUN	_	Number=Plur	15	obj	_	Okuma=nesir|Not=OCR/neşir:_taŋların_olmalı_(çeviri_“mucizelerinin”)
+14	taŋların	taŋ	NOUN	_	Number=Plur|Case=Acc	15	obj	_	Okuma=nesir|Not=OCR/neşir:_taŋların_olmalı_(çeviri_“mucizelerinin”)
 15	ayta	ayt	VERB	_	VerbForm=Conv	16	xcomp	_	Okuma=nesir|Not=-A_bil-_yeterlik
 16	bilip-sėn	bil	VERB	_	Evident=Nfh|Number=Sing|Person=2	7	conj	_	Okuma=nesir
 17	barçasın	barça	PRON	_	Case=Acc|Number[psor]=Sing|Person[psor]=3	14	appos	_	YonetilenHal=Acc|Okuma=nesir
@@ -303,7 +303,7 @@
 # latince_kaynak = Ave, porta paradisi, 59. dörtlük
 # latince = Verbum, Deus quod genuit
 # kopya_supesi = tuvar:yok
-1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir
+1	Ave	ave	INTJ	_	_	14	discourse	_	Okuma=nesir
 2	,	,	PUNCT	_	_	4	punct	_	Okuma=nesir
 3	kim	kim	SCONJ	_	_	4	mark	_	Okuma=nesir|Not=K5_açık
 4	bolmış-sėn	bol	VERB	_	Evident=Nfh|Number=Sing|Person=2	1	acl	_	Okuma=nesir
@@ -316,7 +316,7 @@
 11	;	;	PUNCT	_	_	14	punct	_	Okuma=nesir
 12	alay	alay	ADV	_	_	14	advmod	_	Okuma=nesir
 13	bizge	biz	PRON	_	Case=Dat|Number=Plur|Person=1	14	obl	_	YonetilenHal=Dat|Okuma=nesir
-14	tėydi	tėy	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	1	parataxis	_	Okuma=nesir
+14	tėydi	tėy	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir
 15	,	,	PUNCT	_	_	17	punct	_	Okuma=nesir
 16	ten	ten	NOUN	_	Case=Nom	17	obj	_	Okuma=nesir
 17	kėyinip	kėyin	VERB	_	VerbForm=Conv	14	advcl	_	Okuma=nesir
@@ -377,7 +377,7 @@
 40	bar	bar	ADJ	_	_	41	amod	_	Okuma=nesir
 41	barça	barça	PRON	_	Case=Nom	42	nsubj	_	Okuma=nesir
 42	bolgan	bol	VERB	_	VerbForm=Part	17	conj	_	Okuma=nesir
-43	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	42	aux	_	Okuma=nesir|Periphrasis=Ip_tur
+43	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	42	aux	_	Okuma=nesir|Periphrasis=Gan_tur
 44	.	.	PUNCT	_	_	5	punct	_	Okuma=nesir
 
 # sent_id = cc2.397a.29
@@ -446,15 +446,15 @@
 # kopya_supesi = tuvgan:belirlenemez tuvurur:belirlenemez
 1	Tuvurur	tuvur	VERB	_	VerbForm=Part|Aspect=Hab	2	acl	_	Okuma=nesir|Not=doğur-_tanığı_76a/17
 2	Ataga	ata	NOUN	_	Case=Dat	3	nmod	_	YonetilenHal=Dat|Okuma=nesir|Not=eksiltili:_“bolsun”_paylaşılıyor
-3	ögünç	ögünç	NOUN	_	Case=Nom	11	conj	_	Okuma=nesir
+3	ögünç	ögünç	NOUN	_	Case=Nom	12	nsubj	_	Okuma=nesir
 4	,	,	PUNCT	_	_	7	punct	_	Okuma=nesir
 5	tuvgan	tuv	VERB	_	VerbForm=Part	6	acl	_	Okuma=nesir|Not=doğ-_tanığı_76a/17
 6	ovluna	ovul	NOUN	_	Case=Dat|Number[psor]=Sing|Person[psor]=3	7	nmod	_	YonetilenHal=Dat|Okuma=nesir
-7	bėyenç	bėyenç	NOUN	_	Case=Nom	11	conj	_	Okuma=nesir
+7	bėyenç	bėyenç	NOUN	_	Case=Nom	3	conj	_	Okuma=nesir
 8	,	,	PUNCT	_	_	11	punct	_	Okuma=nesir
 9	Arı	arı	ADJ	_	_	10	amod	_	Okuma=nesir
 10	Tınga	tın	NOUN	_	Case=Dat	12	obl	_	YonetilenHal=Dat|Okuma=nesir
-11	sövünç	sövünç	NOUN	_	Case=Nom	12	nsubj	_	Okuma=nesir
+11	sövünç	sövünç	NOUN	_	Case=Nom	3	conj	_	Okuma=nesir
 12	bolsun	bol	VERB	_	Mood=Imp|Number=Sing|Person=3	0	root	_	Okuma=nesir
 13	,	,	PUNCT	_	_	18	punct	_	Okuma=nesir
 14	tėŋ	tėŋ	ADJ	_	_	15	amod	_	Okuma=nesir
@@ -518,9 +518,9 @@
 # latince_kaynak = Ave, porta paradisi, 64. dörtlük
 # latince = Ave, terra, ferens Fructum
 # kopya_supesi = bėrgen:birebir_kalk
-1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir
+1	Ave	ave	INTJ	_	_	3	discourse	_	Okuma=nesir
 2	,	,	PUNCT	_	_	3	punct	_	Okuma=nesir
-3	yėr-sėn	yėr	NOUN	_	Case=Nom|Number=Sing|Person=2	1	parataxis	_	Okuma=nesir|Not=ad_yüklem_+_2._kişi_eki_(-mėn/-sėn_kararı_açık)
+3	yėr-sėn	yėr	NOUN	_	Case=Nom|Number=Sing|Person=2	0	root	_	Okuma=nesir|Not=ad_yüklem_+_2._kişi_eki_(-mėn/-sėn_kararı_açık)
 4	yemiş	yėmiş	NOUN	_	Case=Nom	5	obj	_	Okuma=nesir|Not=belirtisiz_nesne
 5	bėrgen	bėr	VERB	_	VerbForm=Part	3	acl	_	Okuma=nesir|Not=bėr-_tanığı_72a/5;_Lat._terra_ferens_Fructum_(birebir_kalk)
 6	,	,	PUNCT	_	_	9	punct	_	Okuma=nesir
@@ -535,7 +535,7 @@
 15	,	,	PUNCT	_	_	18	punct	_	Okuma=nesir
 16	Tėŋrini	Tėŋri	PROPN	_	Case=Acc	17	obj	_	YonetilenHal=Acc|Okuma=nesir
 17	körüp	kör	VERB	_	VerbForm=Conv	18	advcl	_	Okuma=nesir
-18	kovangay	kovan	VERB	_	Mood=Opt|Number=Sing|Person=3	1	parataxis	_	Okuma=nesir|Not=Lat._vultu_Dei_perfruentur
+18	kovangay	kovan	VERB	_	Mood=Opt|Number=Sing|Person=3	3	parataxis	_	Okuma=nesir|Not=Lat._vultu_Dei_perfruentur
 19	.	.	PUNCT	_	_	18	punct	_	Okuma=nesir
 
 # sent_id = cc2.385a.09
@@ -548,19 +548,19 @@
 # latince_kaynak = Ave, porta paradisi, 58. dörtlük
 # latince = quieta commoratio, felix sanctorum mansio
 # kopya_supesi = bėrdi:yok
-1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir
+1	Ave	ave	INTJ	_	_	7	discourse	_	Okuma=nesir
 2	,	,	PUNCT	_	_	5	punct	_	Okuma=nesir
 3	mėŋü	mėŋü	ADJ	_	_	5	amod	_	Okuma=nesir
 4	tınç	tınç	ADJ	_	_	5	amod	_	Okuma=nesir|Not=Lat._quieta_commoratio
 5	konuşıŋ	konuş	NOUN	_	Case=Nom|Number[psor]=Sing|Person[psor]=2	7	nsubj	_	Okuma=nesir
 6	ėrür	ėr	AUX	_	Aspect=Hab|Number=Sing|Person=3	7	cop	_	Okuma=nesir|Not=ek-fiil
-7	yėri	yėr	NOUN	_	Case=Nom|Number[psor]=Sing|Person[psor]=3	1	parataxis	_	Okuma=nesir|Not=Lat._sanctorum_mansio
+7	yėri	yėr	NOUN	_	Case=Nom|Number[psor]=Sing|Person[psor]=3	0	root	_	Okuma=nesir|Not=Lat._sanctorum_mansio
 8	arılarnıŋ	arı	NOUN	_	Case=Gen|Number=Plur	7	nmod:poss	_	Okuma=nesir
 9	;	;	PUNCT	_	_	7	punct	_	Okuma=nesir
 10	bu	bu	DET	_	_	11	det	_	Okuma=nesir
 11	karavnı	karav	NOUN	_	Case=Acc	13	obj	_	YonetilenHal=Acc|Okuma=nesir
 12	saa	sėn	PRON	_	Case=Dat|Number=Sing|Person=2	13	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=K4_alıcı
-13	bėrdi	bėr	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	1	parataxis	_	Okuma=nesir|Not=bėr-_tanığı_71b/14;_Latincede_vermek_fiili_yok_(Kıpçakça_seçim)
+13	bėrdi	bėr	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	7	parataxis	_	Okuma=nesir|Not=bėr-_tanığı_71b/14;_Latincede_vermek_fiili_yok_(Kıpçakça_seçim)
 14	,	,	PUNCT	_	_	13	punct	_	Okuma=nesir
 15	togus	togus	NUM	_	_	16	nummod	_	Okuma=nesir
 16	ay	ay	NOUN	_	Case=Nom	19	obl	_	Okuma=nesir|Not=süre_(eklenti);_obl:tmod_adayı
@@ -594,7 +594,7 @@
 13	.	.	PUNCT	_	_	11	punct	_	Okuma=nesir
 
 # sent_id = cc2.352a.12
-# text = 01 sözni ayttı da canın Tėŋeri ėline bėrdi .
+# text = Ol sözni ayttı da canın Tėŋeri ėline bėrdi .
 # kaynak_satirlar = cc2.352a.12
 # etiketleyici = Claude (ön etiket, denetlenmedi)
 # tarih = 2026-11-24
@@ -602,7 +602,7 @@
 # not = 61b/21 Stefanos · canın Tėŋeri ėline bėrdi
 # latince_kaynak = 10. Aziz Stefanos vaazı (krş. Elçilerin İşleri 7:59 "suscipe spiritum meum"; elde yok)
 # kopya_supesi = bėrdi:belirlenemez
-1	01	ol	DET	_	_	2	det	_	Okuma=nesir|Not=OCR:_Ol
+1	Ol	ol	DET	_	_	2	det	_	Okuma=nesir|Not=OCR_düzeltildi:_01→Ol
 2	sözni	söz	NOUN	_	Case=Acc	3	obj	_	YonetilenHal=Acc|Okuma=nesir
 3	ayttı	ayt	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir
 4	da	da	CCONJ	_	_	8	cc	_	Okuma=nesir

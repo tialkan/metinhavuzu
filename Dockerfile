@@ -8,7 +8,7 @@ COPY deploy/basliklar.inc /etc/nginx/conf.d/basliklar.inc
 COPY --chmod=755 deploy/40-parola.sh /docker-entrypoint.d/40-parola.sh
 COPY pilot/ /usr/share/nginx/html/
 RUN rm -f /usr/share/nginx/html/hazirla.py /usr/share/nginx/html/*.md \
- && rm -rf /usr/share/nginx/html/veri/_kaynak /usr/share/nginx/html/veri/.git /usr/share/nginx/html/veri/README.md \
+ && rm -rf /usr/share/nginx/html/veri/_kaynak /usr/share/nginx/html/veri/.git /usr/share/nginx/html/veri/README.md /usr/share/nginx/html/veri/tanik /usr/share/nginx/html/veri/ttl \
  && mkdir -p /srv/kayit && chown 101:101 /srv/kayit
 # Etiket kayıtları kalıcı birimde durur (Coolify: Persistent Storage → /srv/kayit).
 USER 101
