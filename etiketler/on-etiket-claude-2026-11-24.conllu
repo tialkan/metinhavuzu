@@ -133,6 +133,7 @@
 # latince_kaynak = Verbum caro factum est / In hoc anni circulo, 1. dörtlük
 # latince = nato nobis parvulo de virgine Maria
 # kopya_supesi = togup:birebir_kalk
+# agac_onayi = Tarık İsmet Alkan 2026-11-24 (dış hakem düzeltmesi; K9)
 1	Sövünç	sövünç	NOUN	_	Case=Nom	3	nsubj	_	Okuma=nesir
 2	bizge	biz	PRON	_	Case=Dat|Number=Plur|Person=1	3	obl	_	YonetilenHal=Dat|Okuma=nesir
 3	bolup	bol	VERB	_	VerbForm=Conv	0	root	_	Okuma=nesir|Not=K1:_-(I)p_tur-_yapısında_asıl_fiil_kök
@@ -303,6 +304,7 @@
 # latince_kaynak = Ave, porta paradisi, 59. dörtlük
 # latince = Verbum, Deus quod genuit
 # kopya_supesi = tuvar:yok
+# agac_onayi = Tarık İsmet Alkan 2026-11-24 (dış hakem düzeltmesi; K9)
 1	Ave	ave	INTJ	_	_	14	discourse	_	Okuma=nesir
 2	,	,	PUNCT	_	_	4	punct	_	Okuma=nesir
 3	kim	kim	SCONJ	_	_	4	mark	_	Okuma=nesir|Not=K5_açık
@@ -444,6 +446,7 @@
 # not = 76a/17 kıta 13 · tuvgan ovluna
 # latince_kaynak = Doksoloji kalıbı (aday, metin elde yok)
 # kopya_supesi = tuvgan:belirlenemez tuvurur:belirlenemez
+# agac_onayi = Tarık İsmet Alkan 2026-11-24 (dış hakem düzeltmesi; K9)
 1	Tuvurur	tuvur	VERB	_	VerbForm=Part|Aspect=Hab	2	acl	_	Okuma=nesir|Not=doğur-_tanığı_76a/17
 2	Ataga	ata	NOUN	_	Case=Dat	3	nmod	_	YonetilenHal=Dat|Okuma=nesir|Not=eksiltili:_“bolsun”_paylaşılıyor
 3	ögünç	ögünç	NOUN	_	Case=Nom	12	nsubj	_	Okuma=nesir
@@ -518,6 +521,7 @@
 # latince_kaynak = Ave, porta paradisi, 64. dörtlük
 # latince = Ave, terra, ferens Fructum
 # kopya_supesi = bėrgen:birebir_kalk
+# agac_onayi = Tarık İsmet Alkan 2026-11-24 (dış hakem düzeltmesi; K9)
 1	Ave	ave	INTJ	_	_	3	discourse	_	Okuma=nesir
 2	,	,	PUNCT	_	_	3	punct	_	Okuma=nesir
 3	yėr-sėn	yėr	NOUN	_	Case=Nom|Number=Sing|Person=2	0	root	_	Okuma=nesir|Not=ad_yüklem_+_2._kişi_eki_(-mėn/-sėn_kararı_açık)
@@ -548,6 +552,7 @@
 # latince_kaynak = Ave, porta paradisi, 58. dörtlük
 # latince = quieta commoratio, felix sanctorum mansio
 # kopya_supesi = bėrdi:yok
+# agac_onayi = Tarık İsmet Alkan 2026-11-24 (dış hakem düzeltmesi; K9)
 1	Ave	ave	INTJ	_	_	7	discourse	_	Okuma=nesir
 2	,	,	PUNCT	_	_	5	punct	_	Okuma=nesir
 3	mėŋü	mėŋü	ADJ	_	_	5	amod	_	Okuma=nesir
