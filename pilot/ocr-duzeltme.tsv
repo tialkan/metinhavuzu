@@ -2,6 +2,6 @@
 # islem: ekle = önceki satırdan sonra eksik satırı ekle; degistir = başı onceki_satir_baslangici olan satırı yeni_metin ile değiştir. Gerekçe ve denetim kaynağı zorunludur.
 pdf	islem	onceki_satir_baslangici	yeni_metin	gerekce	denetleyen	tarih
 43	ekle	22b vakşı bögeyip barır	23 b. aytıp ye bėriŋiz "söyle bakalım, lütfen söyleyiveriniz"	ABBYY bu satırı okumamış (sağ sayfa eğik); kitap s. 407 görüntüsünden okundu. bėr- altın listesinin 82a/23 b tanığı.	Claude (görüntü), araştırmacı onayı bekliyor	2026-11-24
-16	degistir	01 sözni ayttı	Ol sözni ayttı da canın Tėŋeri ėline bėrdi.	Ol zamiri; ABBYY 'O' ve 'l' harflerini 0 ve 1 okumuş (bağlam: ol sözni ayttı).	Claude (bağlam), araştırmacı onayı bekliyor	2026-11-24
-18	degistir	01 sözni Kristus	Ol sözni Kristus bugün aytır barça yazuklılarga kim kėrti kelepenler Tėŋri	Ol zamiri; ABBYY 'O' ve 'l' harflerini 0 ve 1 okumuş (bağlam: ol sözni ayttı).	Claude (bağlam), araştırmacı onayı bekliyor	2026-11-24
-33	degistir	söz kim anıŋ köp taŋlarm	söz kim anıŋ köp taŋların	ABBYY n'yi m okumuş; neşir çevirisi 'mucizelerinin' (iyelik + belirtme).	Claude (bağlam), araştırmacı onayı bekliyor	2026-11-24
+16	degistir	01 sözni ayttı	Ol sözni ayttı da canın Tėŋeri ėline bėrdi.	Ol zamiri; ABBYY 'O' ve 'l' harflerini 0 ve 1 okumuş (bağlam: ol sözni ayttı).	Claude (bağlam); Tarık İsmet Alkan onayladı 2026-11-24	2026-11-24
+18	degistir	01 sözni Kristus	Ol sözni Kristus bugün aytır barça yazuklılarga kim kėrti kelepenler Tėŋri	Ol zamiri; ABBYY 'O' ve 'l' harflerini 0 ve 1 okumuş (bağlam: ol sözni ayttı).	Claude (bağlam); Tarık İsmet Alkan onayladı 2026-11-24	2026-11-24
+33	degistir	söz kim anıŋ köp taŋlarm	söz kim anıŋ köp taŋların	ABBYY n'yi m okumuş; neşir çevirisi 'mucizelerinin' (iyelik + belirtme).	Claude (bağlam); Tarık İsmet Alkan onayladı 2026-11-24	2026-11-24
