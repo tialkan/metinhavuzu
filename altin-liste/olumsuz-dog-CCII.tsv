@@ -1,0 +1,22 @@
+# Gevşek "doğ-" aramasında (tuv/tog/töre ile başlayan sözcükler) gelen ama doğ-/doğur- fiil tanığı olmayan yerler.
+# tur: farkli_sozcuk (başka kök), turev_ad (doğ- kökünden ad; fiil tanığı sayılmaz), katman_sizintisi (metin katmanına girmiş Türkçe çeviri satırı), aday (fiil biçimi; dizinde yok ya da dizin kapsamı dışında, elle bakılacak)
+satir	bicim	tur	neden
+cc2.336a.07	tuvustı	farkli_sozcuk	tuvus- "tamamlamak" (sözlük maddesi)
+cc2.340a.12	tuv	farkli_sozcuk	tuv "dağ keçisi" (ad)
+cc2.385a.10	togus	farkli_sozcuk	togus "dokuz"
+cc2.403a.18	tuvra	farkli_sozcuk	tuvra "doğru"
+cc2.404a.19	togur-mėn	farkli_sozcuk	togur- "yutmak, kafaya dikip içmek"
+cc2.408a.18	togur	farkli_sozcuk	togur- "dokumak"
+cc2.372a.18	törege	farkli_sozcuk	töre "kural, yasa" (ad)
+cc2.372a.18	töreye	farkli_sozcuk	töre (sözlük satırındaki Türkçe karşılık)
+cc2.382a.05	töreniŋ	farkli_sozcuk	töre "kural, yasa" (ad)
+cc2.398a.18	töresine	farkli_sozcuk	töre "kural, yasa" (ad)
+cc2.353a.21	toguşı	turev_ad	toguş "doğuş" (kün toguşı)
+cc2.353a.32	toguşı	turev_ad	toguş "doğuş"
+cc2.396a.08	tuvuşnıŋ	turev_ad	tuvuş "doğuş" (kün tuvuşı)
+cc2.372a.22	tuvurguçı	turev_ad	tuvurguçı "anne" (sözlük maddesi)
+cc2.372a.22	tuvurdaçı	turev_ad	tuvurdaçı "doğuran, anne"
+cc2.384a.02	tuvurdaçı	turev_ad	tuvurdaçı "doğuran"
+cc2.396a.23	tuvurdaçı	turev_ad	tuvurdaçı "doğuran"
+cc2.397a.30	töretteçi	turev_ad	töretteçi "yaratıcı" (töret- kökünden ad)
+cc2.398a.25	tuvurdaçı	turev_ad	tu[vurdaçı] "doğuran"; editör açması (76a/23)

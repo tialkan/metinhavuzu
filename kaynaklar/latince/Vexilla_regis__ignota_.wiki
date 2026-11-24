@@ -1,0 +1,71 @@
+{{Titulus
+| Scriptor = Venantius Fortunatus
+| OperaeTitulus = {{PAGENAME}}
+| OperaeWikiPagina = {{PAGENAME}}
+| Annus = saeculo VI
+| SubTitulus = 
+| Genera = Precationes christianae
+}}
+<div class=text>
+<br />
+Vexilla Regis prodeunt;<br />
+fulget Crucis mysterium,<br />
+quo carne carnis conditor<br />
+suspensus est patibulo.<br />
+<br />
+Confixa clavis viscera<br />
+tendens manus, vestigia,<br />
+redemptionis gratia<br />
+hic immolata est hostia. <br />
+<br />
+Quo vulneratus insuper<br />
+mucrone diro lanceae,<br />
+ut nos lavaret crimine,<br />
+manavit unda et sanguine.<br /> 
+<br />
+Impleta sunt quae concinit<br />
+David fideli carmine,<br />
+dicendo nationibus:<br />
+regnavit a ligno Deus.<br />
+<br />
+Arbor decora et fulgida,<br />
+ornata Regis purpura,<br />
+electa digno stipite<br />
+tam sancta membra tangere.<br />
+<br />
+Beata, cuius brachiis<br />
+pretium pependit saeculi:<br />
+statera facta corporis,<br />
+praedam tulitque tartari.<br />
+<br />
+Fundis aroma cortice,<br />
+vincis sapore nectare,<br />
+iucunda fructu fertili<br />
+plaudis triumpho nobili. <br />
+<br />
+Salve, ara, salve, victima,<br />
+de passionis gloria,<br />
+qua vita mortem pertulit<br />
+et morte vitam reddidit. <br />
+<br />
+O Crux ave, spes unica,<br />
+hoc Passionis tempore!<ref>
+in hac triumphi gloria!</ref><br />
+piis adauge gratiam,<br />
+reisque dele crimina. <br />
+<br />
+Te, fons salutis Trinitas,<br />
+collaudet omnis spiritus:<br />
+quos per Crucis mysterium<br />
+salvas, fove per saecula. <br />
+<br />
+Amen.
+<br />
+===== In Festo Exaltationis Sanctae Crucis =====
+<div style="font-size:100%"><references /></div>
+<br />
+{{Precationes christianae}}
+</div>
+[[en:The Royal Banners Forward Go]]
+[[pt:Poesias de Dom Pedro II/69]]
+[[Categoria:Saeculi sexti opera]]

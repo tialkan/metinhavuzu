@@ -1,0 +1,43 @@
+{{eser başlığı
+| önceki      = [[Yeni Ahit/Matta/1|Matta 1]]   
+| sonraki     = [[Yeni Ahit/Matta/3|Matta 3]]
+| başlık      = [[Yeni Ahit/Matta|Matta]]
+| bölüm       = '''2'''
+| eser sahibi = 
+| notlar      =  
+}} 
+{{kısım||1}}İmdi İsa, kıral Hirodesin günlerinde, Yahudiye Beytleheminde doğduğu zaman, işte, şarktan Yeruşalime müneccimler gelip dediler:
+{{kısım||2}}Yahudilerin Kıralı doğan zat nerededir? Çünkü onun yıldızını şarkta gördük, ve ona secde kılmağa geldik.
+{{kısım||3}}Kıral Hirodes bunu işitince, bütün Yeruşalimle beraber yüreği oynadı. 
+{{kısım||4}}Hirodes bütün başkâhinleri ve kavmın yazıcılarını toplayarak, onlardan Mesihin nerede doğacağını sordu. 
+{{kısım||5}}Onlar da kendisine dediler: Yahudiye Beytleheminde; çünkü peygamber vasıtası ile şöyle yazılmıştır:<br>
+{{kısım||6}}"Ve sen, ey Beytlehem, Yahuda diyarı,<br>
+Yahuda reisleri arasında hiç de en küçüğü değilsin;<br>
+Zira kavmim İsraili güdecek olan reis senden çıkacaktır."<br>
+{{kısım||7}}O zaman Hirodes müneccimleri gizlice çağırdı; ve onlardan yıldızın ne vakit gözüktüğünü iyice öğrendi. 
+{{kısım||8}}Ve: Gidin, ve çocuk hakkında iyi araştırın; onu bulduğunuz zaman bana haber verin ki, ben de gelip ona secde kılayım, diyerek kendilerini Beytleheme gönderdi. 
+{{kısım||9}}Onlar da kıralı dinleyip yollarına gittiler; ve işte, şarkta gördükleri yıldız önlerince gidiyordu; ta çocuğun bulunduğu yere kadar gelerek üzerinde durdu. 
+{{kısım||10}}Onlar da yıldızı gördükleri zaman, taşkın sevinçle sevindiler. 
+{{kısım||11}}Eve girip anası Meryem ile çocuğu gördüler; ve yere kapanıp ona secde kıldılar; hazinelerini açarak ona hediyeler, altın, günnük, ve mür takdim ettiler. 
+{{kısım||12}}Hirodesin yanına dönmesinler diye rüyada kendilerine bildirildiğinden, memleketlerine başka bir yoldan gittiler. 
+{{kısım||13}}İmdi, müneccimler yola çıktıktan sonra, işte, Rabbin meleği Yusufa ruyada görünüp dedi: Kalk, anası ile çocuğu al, ve Mısıra kaç; ve ben sana söyleyinceye kadar orada kal; çünkü Hirodes çocuğu yok etmek için onu arayacaktır. 
+{{kısım||14}}Yusuf kalktı, geceleyin anası ile çocuğu aldı, ve Mısıra gitti. 
+{{kısım||15}}Ve Hirodesin ölümüne kadar orada kaldı; ta ki, peygamber vasıtası ile: "Oğlumu Mısırdan çağırdım," diye Rabbin söylediği söz yerine gelsin. 
+{{kısım||16}}O vakit, Hirodes müneccimler tarafından oynatıldığını görünce, pek çok kızdı, ve Beytlehemde ve bütün sınırları içinde, müneccimlerden iyice öğrendiği zamana göre, iki yaşındaki ve daha aşağı bütün erkek çocukları öldürttü. 
+{{kısım||17}}O zaman Yeremya peygamber vasıtası ile söylenen:<br> 
+{{kısım||18}}"Ramada bir ses işitildi;<br>
+Ağlayış ve çok figan;<br>
+Çocukları için ağlayan Rahel teselli edilmek istemez;<br>
+Çünkü onlar yok,"<br>
+sözü yerine geldi.
+{{kısım||19}}Fakat Hirodes ölünce, işte, Rabbin meleği Mısırda Yusufa rüyada görünüp dedi:
+{{kısım||20}}Kalk, çocuğu ve anasını al, ve İsrail diyarına git; çünkü çocuğun canını arayanlar öldüler. 
+{{kısım||21}}Ve Yusuf kalktı, ve çocuğu ve anasını aldı, ve İsrail diyarına girdi. 
+{{kısım||22}}Fakat babası Hirodesin yerine, Arhelaosun Yahudiyede kıral olduğunu işitince, oraya gitmeğe korktu, ve rüyada kendisine bildirilip, Galile taraflarına çekildi, 
+{{kısım||23}}ve gelip Nâsıra denilen şehirde oturdu; ta ki, peygamberler vasıtası ile: "Nâsıralı çağırılacaktır," diye söylenen söz yerine gelsin.
+
+{{Yeni Ahit}}
+
+{{Eser son|kaynak=
+{{kitap kaynağı |başlık=Kitab-ı Mukaddes |soyadı= |ad= |yazarbağı= |yıl=1941 |yayıncı=Kitab-ı Mukaddes Şirketi|yer= İstanbul|isbn= |sayfa= |sayfalar= |erişimtarihi=|url=}}|telif={{KM-Türkiye|kat = hayır}} 
+}}

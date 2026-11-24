@@ -1,0 +1,52 @@
+{{Dinle
+| dosyaismi  = Schola Gregoriana-Ave Maria.ogg
+| başlık     = "Ave Maria"
+| alt        = 
+| açıklama   = Geleneksel bir Latin Gregoryen ilahisi şeklinde olan dua
+}}
+'''Ave Maria'''<ref>{{Kitap kaynağı|başlık=New Catholic Encyclopedia - Second Edition|erişimtarihi=|tarih=2003|dil=İngilizce|sayfa=|sayfalar=616-617 Cilt 6 ISBN 0-7876-4010-7|çalışma=|yayıncı=Thomson and Gale}}</ref> ({{Dil|en|Hail Mary|dil_adı=e}}; {{dil|tr|Selam Sana ey Meryem}}), [[İsa]]'nın annesi Kutsal Bakire [[Meryem]]'in şefaatını isteyen geleneksel bir [[Katolik]] duasıdır.
+
+[[Roma Katolikliği]]'nde dua, [[Tespih (dua)|Tespih]] ({{dil|en|''Rosary''}}) ve [[Angelus]] dualarının temelini oluşturur. [[Oryantal Ortodoksluk|Oryantal Ortodoks Kiliselerinde]], [[Doğu Ortodoks Kilisesi|Doğu Ortodoks]] ve [[Doğu Katolik Kiliseleri]]nde, benzer bir dua hem resmi ayinlerde hem Yunanca hem de çevirilerde kullanılmaktadır. Ayrıca, [[Anglikanizm|Anglikanlar]], Bağımsız Katolikler ve Eski Katolikler dahil olmak üzere, Hristiyanlığın Katolik geleneği dahilindeki birçok grup tarafından kullanılmaktadır.
+
+Büyük ölçüde, [[Luka İncili]]'ndeki iki ifadeye dayanan dua, çeşitli geleneklerde farklı biçimlerdedir. Genellikle müzik ile söylenmektedir.
+
+== İncil kaynağı ==
+Dua, Aziz Luka İncili'nde Meryem'e iki defa selam verir: "Selâm, Rab seninledir." ve "Sen kadınlar arasında mübareksin, karnının semeresi de mübarektir." 13. yüzyılın ortalarında Batı Avrupa'da dua, sadece bu sözlerden ibaretti; "Hail" kelimesinden sonra sadece "Mary" kelimesinin eklenişi, duadaki [[Thomas Aquinas|Aziz Thomas Aquinas]] yorumundan açıkça kaynaklanmaktadır.
+
+Aziz Luka İncili'ndeki iki pasajdan ilki, aslen [[Koine Grekçesi]] ile yazılmıştır ve Melek [[Cebrail]]'in selamlamasıdır. Selamlamanın başlaması χαῖρε, ''chaíre'', "Hail" olarak çevrilmiştir ve anlamı ise "sevinmek" ya da "memnun olmak"tır. Bu, Aziz Luka İncili<nowiki>''</nowiki>nin yazıldığı ve [[Modern Yunanca]]da aynı anlamda kullanılmaya devam eden normal bir karşılamaydı.
+
+İkinci pasaj, Luka 1:42'de [[Elisabet (Yeni Ahit)|Elisabet]]'in Meryem'i selamlamasından alınmıştır: "Sen kadınlar arasında mübareksin, karnının semeresi de mübarektir." İki pasaj birlikte ele alınınca Luka 1. bölümde Meryem iki pasajda toplam iki defa selamlanmaktadır.
+
+== Dua ==
+{{Şiir çevirisi|
+;Latince
+Ávē Marī́a, grā́tiā plḗna,
+Dóminus tḗcum.
+Benedícta tū in muliéribus,
+et benedíctus frū́ctus véntris túī, Iḗsūs.<ref>{{Web kaynağı |url=http://www.musicasacra.com/pdf/missale62.pdf |başlık=edition |erişimtarihi=25 Kasım 2020 |arşivurl=https://web.archive.org/web/20080326145016/http://www.musicasacra.com/pdf/missale62.pdf |arşivtarihi=26 Mart 2008 |ölüurl=hayır }}</ref>
+Sā́ncta Marī́a, Mā́ter Déī,
+ṓrā prō nṓbīs peccātṓribus,
+nunc et in hṓrā mórtis nóstrae. Āmēn.
+|
+;Türkçe
+Selam sana, lütufla kaplı Meryem:
+Rab, seninledir.
+Kadınların içinde mübâreksin
+ve mübârektir senin rahminin meyvesi İsa.
+Aziz Meryem, Tanrı'nın Annesi,
+Biz günahkârlar için
+şimdi ve ölüm saatimizde dua et.
+Amin.
+}}
+
+== Ayrıca bakınız ==
+
+* [[Magnificat]]
+
+== Kaynakça ==
+{{Kaynakça}}
+
+{{Otorite kontrolü}}
+
+[[Kategori:Hristiyan duaları]]
+[[Kategori:Roma Katolik duaları]]

@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!deploy/
+!pilot/
+pilot/*.md
+pilot/hazirla.py

@@ -1,0 +1,18 @@
+# Gevşek "kėl-" aramasında (kėl/kel ile başlayan sözcükler) gelen ama kėl- "gelmek" tanığı olmayan yerler.
+# tur: farkli_sozcuk (başka kök), turev_fiil (çatı ekli gövde; dizinde ayrı madde, bu fiilin tanığı sayılmaz), katman_sizintisi (metin katmanına girmiş Türkçe çeviri ya da editör notu satırı), belirsiz (elle bakılmalı)
+satir	bicim	tur	neden
+cc2.402a.05	kelebek	farkli_sozcuk	sözlük maddesinin Türkçe karşılığı
+cc2.403a.24	kelle	farkli_sozcuk	sözlük maddesinin Türkçe karşılığı
+cc2.408a.22	kel	farkli_sozcuk	sözlük maddesinin Türkçe karşılığı
+cc2.344a.21	kėlin	farkli_sozcuk	kėlin "gelin" (ad)
+cc2.357a.02	kelepenlerge	farkli_sozcuk	kelepen "cüzamlı"
+cc2.357a.04	kelepenler	farkli_sozcuk	kelepen "cüzamlı"
+cc2.357a.05	kelependen	farkli_sozcuk	kelepen "cüzamlı"
+cc2.357a.12	kelepen	farkli_sozcuk	kelepen "cüzamlı"
+cc2.357a.13	kelepenni	farkli_sozcuk	kelepen "cüzamlı"
+cc2.357a.14	kelepenni	farkli_sozcuk	kelepen "cüzamlı"
+cc2.357a.17	kelepen	farkli_sozcuk	kelepen "cüzamlı"
+cc2.357a.20	kelepen	farkli_sozcuk	kelepen "cüzamlı"
+cc2.390a.08	kėltirdi	turev_fiil	kėltir- "getirmek" (ettirgen)
+cc2.401a.17	kėltirişti	turev_fiil	kėltiriş- "birlikte getirmek"
+cc2.343a.15	keleşim	belirsiz	bilmece (Tüv yėr keleşim); keleş + iyelik mi, kėl- türevi mi, sözlükte bakılmalı

@@ -1,0 +1,613 @@
+# sent_id = cc2.351a.02
+# text = Arı Lukas aytır Evangelim içinde , nėçik bugün , kaçan Kristus togdı , kėldi frişte yışda ayttı kütövçige kim koylar küter .
+# kaynak_satirlar = cc2.351a.02 cc2.351a.03
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = Lukas 61b/1-4 · kaçan Kristus togdı, kėldi
+# latince_kaynak = Vulgata, Luka 2:11
+# latince = natus est vobis hodie Salvator
+# kopya_supesi = togdı:yok
+1	Arı	arı	ADJ	_	_	2	amod	_	Okuma=nesir
+2	Lukas	Lukas	PROPN	_	_	3	nsubj	_	Okuma=nesir
+3	aytır	ayt	VERB	_	Aspect=Hab|Mood=Ind|Tense=Pres|Number=Sing|Person=3	0	root	_	Okuma=nesir
+4	Evangelim	Evangelim	PROPN	_	_	5	nmod:poss	_	Okuma=nesir
+5	içinde	iç	NOUN	_	Case=Loc|Number[psor]=Sing|Person[psor]=3	3	obl	_	YonetilenHal=Loc|Okuma=nesir
+6	,	,	PUNCT	_	_	14	punct	_	Okuma=nesir
+7	nėçik	nėçik	SCONJ	_	_	14	mark	_	Okuma=nesir|Not=aktarılan_söz_için_“nasıl_ki”_(K5'e_benzer)
+8	bugün	bugün	ADV	_	_	14	advmod	_	Okuma=nesir
+9	,	,	PUNCT	_	_	12	punct	_	Okuma=nesir
+10	kaçan	kaçan	SCONJ	_	_	12	mark	_	Okuma=nesir
+11	Kristus	Kristus	PROPN	_	_	12	nsubj	_	Okuma=nesir
+12	togdı	tog	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	14	advcl	_	Okuma=nesir|Not=doğ-_tanığı_61b/1-2
+13	,	,	PUNCT	_	_	12	punct	_	Okuma=nesir
+14	kėldi	kėl	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	3	ccomp	_	Okuma=nesir|Not=kėl-_tanığı_61b/1-2
+15	frişte	frişte	NOUN	_	Case=Nom	14	nsubj	_	Okuma=nesir
+16	yışda	yış	NOUN	_	Case=Loc	17	obl	_	YonetilenHal=Loc|Okuma=nesir
+17	ayttı	ayt	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	14	conj	_	Okuma=nesir
+18	kütövçige	kütövçi	NOUN	_	Case=Dat	17	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=K4:_yönelme_hâlli_alıcı_obl
+19	kim	kim	SCONJ	_	_	21	mark	_	Okuma=nesir|Not=K5_açık:_ilgi
+20	koylar	koy	NOUN	_	Case=Nom|Number=Plur	21	obj	_	Okuma=nesir|Not=belirtisiz_nesne
+21	küter	küt	VERB	_	Aspect=Hab|Tense=Pres|Number=Sing|Person=3	18	acl	_	Okuma=nesir
+22	.	.	PUNCT	_	_	3	punct	_	Okuma=nesir
+
+# sent_id = cc2.351a.04
+# text = " Mėn tanıklatır-mėn sizge ulu sövünç , kim bugün togdı barça ėlni kutkardaçı .
+# kaynak_satirlar = cc2.351a.04
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 61b/3-4 · kim bugün togdı
+# latince_kaynak = Vulgata, Luka 2:11
+# latince = quia natus est vobis hodie Salvator, qui est Christus
+# kopya_supesi = togdı:olasi_kalk
+1	"	"	PUNCT	_	_	3	punct	_	Okuma=nesir
+2	Mėn	mėn	PRON	_	Case=Nom|Number=Sing|Person=1	3	nsubj	_	Okuma=nesir
+3	tanıklatır-mėn	tanıklat	VERB	_	Aspect=Hab|Tense=Pres|Number=Sing|Person=1	0	root	_	Okuma=nesir|Not=kişi_eki_ayrı_sözcük_değil_(sözcükleme_kararı_açık)
+4	sizge	siz	PRON	_	Case=Dat|Number=Plur|Person=2	3	obl	_	YonetilenHal=Dat|Okuma=nesir
+5	ulu	ulu	ADJ	_	_	6	amod	_	Okuma=nesir
+6	sövünç	sövünç	NOUN	_	Case=Nom	3	obj	_	Okuma=nesir|Not=belirtisiz_nesne
+7	,	,	PUNCT	_	_	10	punct	_	Okuma=nesir
+8	kim	kim	SCONJ	_	_	10	mark	_	Okuma=nesir|Not=K5_açık
+9	bugün	bugün	ADV	_	_	10	advmod	_	Okuma=nesir
+10	togdı	tog	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	3	ccomp	_	Okuma=nesir|Not=doğ-_tanığı_61b/3-4;_Luka_2:11_natus_est_vobis
+11	barça	barça	DET	_	_	12	det	_	Okuma=nesir
+12	ėlni	ėl	NOUN	_	Case=Acc	13	obj	_	YonetilenHal=Acc|Okuma=nesir
+13	kutkardaçı	kutkar	VERB	_	VerbForm=Part|Tense=Fut	10	nsubj	_	Okuma=nesir|Not=ad_gibi_kullanılan_sıfat-fiil_(baş_ad_yok)
+14	.	.	PUNCT	_	_	3	punct	_	Okuma=nesir
+
+# sent_id = cc2.353a.02
+# text = Bugün sėkizinçi kün , agırlalık nėçik Bėyimiz Tėŋeri arı kız Mariamdan togdı .
+# kaynak_satirlar = cc2.353a.02
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 61b/22-23 · Mariamdan togdı
+# latince_kaynak = Credo kalıbı (Sünnet vaazı, Luka 2:21 elde yok)
+# latince = ex Maria Virgine
+# kopya_supesi = togdı:olasi_kalk
+1	Bugün	bugün	ADV	_	_	5	advmod	_	Okuma=nesir
+2	sėkizinçi	sėkizinçi	ADJ	_	NumType=Ord	3	amod	_	Okuma=nesir
+3	kün	kün	NOUN	_	Case=Nom	5	obj	_	Okuma=nesir|Not=belirtisiz_nesne;_çeviri_“günü”
+4	,	,	PUNCT	_	_	5	punct	_	Okuma=nesir
+5	agırlalık	agırla	VERB	_	Mood=Opt|Number=Plur|Person=1	0	root	_	Okuma=nesir
+6	nėçik	nėçik	SCONJ	_	_	12	mark	_	Okuma=nesir
+7	Bėyimiz	bėy	NOUN	_	Case=Nom|Number[psor]=Plur|Person[psor]=1	12	nsubj	_	Okuma=nesir
+8	Tėŋeri	Tėŋri	PROPN	_	_	7	flat	_	Okuma=nesir
+9	arı	arı	ADJ	_	_	10	amod	_	Okuma=nesir
+10	kız	kız	NOUN	_	_	11	nmod	_	Okuma=nesir
+11	Mariamdan	Mariam	PROPN	_	Case=Abl	12	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak
+12	togdı	tog	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	5	advcl	_	Okuma=nesir|Not=doğ-_tanığı_61b/22-23
+13	.	.	PUNCT	_	_	5	punct	_	Okuma=nesir
+
+# sent_id = cc2.353a.31
+# text = " Haydatur ol kim togdı , Cuhutlar ḫanı ?
+# kaynak_satirlar = cc2.353a.31
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 61b/39-40 · Haydatur ol kim togdı
+# latince_kaynak = Vulgata, Matta 2:2
+# latince = Ubi est qui natus est rex Judæorum?
+# kopya_supesi = togdı:birebir_kalk
+1	"	"	PUNCT	_	_	2	punct	_	Okuma=nesir
+2	Haydatur	kayda	ADV	_	_	0	root	_	Okuma=nesir|Not=ad_cümlesi:_kayda+dur
+3	ol	ol	PRON	_	Case=Nom|Number=Sing|Person=3	2	nsubj	_	Okuma=nesir
+4	kim	kim	PRON	_	_	5	nsubj	_	Okuma=nesir|Not=K5_açık:_ilgi_zamiri_olarak_özne
+5	togdı	tog	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	3	acl	_	Okuma=nesir|Not=doğ-_tanığı_61b/39-40
+6	,	,	PUNCT	_	_	8	punct	_	Okuma=nesir
+7	Cuhutlar	Cuhut	NOUN	_	Number=Plur	8	nmod:poss	_	Okuma=nesir
+8	ḫanı	ḫan	NOUN	_	Number[psor]=Sing|Person[psor]=3	3	appos	_	Okuma=nesir
+9	?	?	PUNCT	_	_	2	punct	_	Okuma=nesir
+
+# sent_id = cc2.353a.33
+# text = Körgüzdiler alarga kim Kristus Betlemde toggay , burun alay aytıldı paygambardan .
+# kaynak_satirlar = cc2.353a.33 cc2.353a.34
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 62a/1-2 · Betlemde toggay
+# latince_kaynak = Vulgata, Matta 2:4-5
+# latince = sciscitabatur ab eis ubi Christus nasceretur. At illi dixerunt: In Bethlehem
+# kopya_supesi = toggay:olasi_kalk
+1	Körgüzdiler	körgüz	VERB	_	Mood=Ind|Tense=Past|Number=Plur|Person=3	0	root	_	Okuma=nesir
+2	alarga	ol	PRON	_	Case=Dat|Number=Plur|Person=3	1	obl	_	YonetilenHal=Dat|Okuma=nesir
+3	kim	kim	SCONJ	_	_	6	mark	_	Okuma=nesir|Not=K5_açık
+4	Kristus	Kristus	PROPN	_	_	6	nsubj	_	Okuma=nesir
+5	Betlemde	Betlem	PROPN	_	Case=Loc	6	obl	_	YonetilenHal=Loc|Okuma=nesir
+6	toggay	tog	VERB	_	Mood=Opt|Number=Sing|Person=3	1	ccomp	_	Okuma=nesir|Not=doğ-_tanığı_62a/1-2;_dizinde_tog[g]ay
+7	,	,	PUNCT	_	_	10	punct	_	Okuma=nesir
+8	burun	burun	ADV	_	_	10	advmod	_	Okuma=nesir
+9	alay	alay	ADV	_	_	10	advmod	_	Okuma=nesir
+10	aytıldı	ayt	VERB	_	Mood=Ind|Tense=Past|Voice=Pass|Number=Sing|Person=3	1	parataxis	_	Okuma=nesir
+11	paygambardan	paygambar	NOUN	_	Case=Abl	10	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=edilgen_eylemde_eden
+12	.	.	PUNCT	_	_	1	punct	_	Okuma=nesir
+
+# sent_id = cc2.389a.27
+# text = Sövünç bizge bolup turur , dünyege tirilik bėrilip turur , Kristus bizge togup turur arı kız Mariamdan .
+# kaynak_satirlar = cc2.389a.25 cc2.389a.26 cc2.389a.27 cc2.389a.23
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 73a/6-8 kıta 1 · Kristus bizge togup turur
+# latince_kaynak = Verbum caro factum est / In hoc anni circulo, 1. dörtlük
+# latince = nato nobis parvulo de virgine Maria
+# kopya_supesi = togup:birebir_kalk
+1	Sövünç	sövünç	NOUN	_	Case=Nom	3	nsubj	_	Okuma=nesir
+2	bizge	biz	PRON	_	Case=Dat|Number=Plur|Person=1	3	obl	_	YonetilenHal=Dat|Okuma=nesir
+3	bolup	bol	VERB	_	VerbForm=Conv	0	root	_	Okuma=nesir|Not=K1:_-(I)p_tur-_yapısında_asıl_fiil_kök
+4	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	3	aux	_	Okuma=nesir|Periphrasis=Ip_tur
+5	,	,	PUNCT	_	_	8	punct	_	Okuma=nesir
+6	dünyege	dünye	NOUN	_	Case=Dat	8	obl	_	YonetilenHal=Dat|Okuma=nesir
+7	tirilik	tirilik	NOUN	_	Case=Nom	8	nsubj	_	Okuma=nesir|Not=edilgen_özne
+8	bėrilip	bėr	VERB	_	VerbForm=Conv|Voice=Pass	3	conj	_	Okuma=nesir
+9	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	8	aux	_	Okuma=nesir|Periphrasis=Ip_tur
+10	,	,	PUNCT	_	_	13	punct	_	Okuma=nesir
+11	Kristus	Kristus	PROPN	_	_	13	nsubj	_	Okuma=nesir
+12	bizge	biz	PRON	_	Case=Dat|Number=Plur|Person=1	13	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=K4_yararlanıcı_(Rol_yararlanici);_Luka_2:11_vobis
+13	togup	tog	VERB	_	VerbForm=Conv	3	conj	_	Okuma=nesir|Not=doğ-_tanığı_73a/8
+14	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	13	aux	_	Okuma=nesir|Periphrasis=Ip_tur
+15	arı	arı	ADJ	_	_	16	amod	_	Okuma=nesir
+16	kız	kız	NOUN	_	_	17	nmod	_	Okuma=nesir
+17	Mariamdan	Mariam	PROPN	_	Case=Abl	13	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak;_yüklemden_sonra:_Latince_nakarat_dizesi_de_virgine_Maria_(In_hoc_anni_circulo),_birebir_kalk
+18	.	.	PUNCT	_	_	3	punct	_	Okuma=nesir
+
+# sent_id = cc2.390a.22
+# text = Ė , ol algışlı ḫatun , kimden Bėyimiz togdı , dünye yazuḫın yuldı .
+# kaynak_satirlar = cc2.390a.21 cc2.390a.22 cc2.390a.23
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 73a/14-15 kıta 6 · kimden Bėyimiz togdı
+# latince_kaynak = Verbum caro factum est / In hoc anni circulo, 6. dörtlük
+# latince = O beata femina, cujus ventris sarcina mundi luit crimina
+# kopya_supesi = togdı:yok
+1	Ė	ė	INTJ	_	_	5	discourse	_	Okuma=nesir
+2	,	,	PUNCT	_	_	1	punct	_	Okuma=nesir
+3	ol	ol	DET	_	_	5	det	_	Okuma=nesir
+4	algışlı	algışlı	ADJ	_	_	5	amod	_	Okuma=nesir
+5	ḫatun	ḫatun	NOUN	_	Case=Nom	13	vocative	_	Okuma=nesir
+6	,	,	PUNCT	_	_	9	punct	_	Okuma=nesir
+7	kimden	kim	PRON	_	Case=Abl	9	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak;_ilgi_zamiri;_Lat._cujus_ventris_sarcina_(ilgi_hâli):_hâl_Latinceden_bağımsız
+8	Bėyimiz	bėy	NOUN	_	Case=Nom|Number[psor]=Plur|Person[psor]=1	9	nsubj	_	Okuma=nesir
+9	togdı	tog	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	5	acl	_	Okuma=nesir|Not=doğ-_tanığı_73a/14-15
+10	,	,	PUNCT	_	_	13	punct	_	Okuma=nesir
+11	dünye	dünye	NOUN	_	_	12	nmod:poss	_	Okuma=nesir
+12	yazuḫın	yazuḫ	NOUN	_	Case=Acc|Number[psor]=Sing|Person[psor]=3	13	obj	_	YonetilenHal=Acc|Okuma=nesir
+13	yuldı	yul	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir|Not=öznesi_bağlamdan_(Bėyimiz)
+14	.	.	PUNCT	_	_	13	punct	_	Okuma=nesir
+
+# sent_id = cc2.380a.05
+# text = Ave kız , kimniŋ kovatı ėrdi Arı Tın mihiri ; boyıŋ anda çiçeklenmiş , Tėŋri sėnden kaçan tuvmış .
+# kaynak_satirlar = cc2.380a.02 cc2.380a.03 cc2.380a.04 cc2.380a.05
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 70a/12 kıta 27 · Tėŋri sėnden kaçan tuvmış
+# latince_kaynak = Ave, porta paradisi, 27. dörtlük
+# latince = cuius caro tunc floruit quando Christus te genuit
+# kopya_supesi = tuvmış:yok
+1	Ave	ave	INTJ	_	_	2	discourse	_	Okuma=nesir|Not=Latince_selamlama
+2	kız	kız	NOUN	_	Case=Nom	13	vocative	_	Okuma=nesir
+3	,	,	PUNCT	_	_	9	punct	_	Okuma=nesir
+4	kimniŋ	kim	PRON	_	Case=Gen	5	nmod:poss	_	Okuma=nesir
+5	kovatı	kovat	NOUN	_	Number[psor]=Sing|Person[psor]=3	9	nsubj	_	Okuma=nesir
+6	ėrdi	ė	AUX	_	Tense=Past|Number=Sing|Person=3	9	cop	_	Okuma=nesir
+7	Arı	arı	ADJ	_	_	8	amod	_	Okuma=nesir
+8	Tın	tın	NOUN	_	_	9	nmod:poss	_	Okuma=nesir
+9	mihiri	mihir	NOUN	_	Number[psor]=Sing|Person[psor]=3	2	acl	_	Okuma=nesir|Not=ad_yüklemli_ilgi_cümlesi
+10	;	;	PUNCT	_	_	13	punct	_	Okuma=nesir
+11	boyıŋ	boy	NOUN	_	Case=Nom|Number[psor]=Sing|Person[psor]=2	13	nsubj	_	Okuma=nesir
+12	anda	anda	ADV	_	_	13	advmod	_	Okuma=nesir
+13	çiçeklenmiş	çiçeklen	VERB	_	Evident=Nfh|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir
+14	,	,	PUNCT	_	_	18	punct	_	Okuma=nesir
+15	Tėŋri	Tėŋri	PROPN	_	_	18	nsubj	_	Okuma=nesir
+16	sėnden	sėn	PRON	_	Case=Abl|Number=Sing|Person=2	18	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak;_Lat._quando_Christus_te_genuit_(belirtme):_hâl_Latinceden_bağımsız
+17	kaçan	kaçan	SCONJ	_	_	18	mark	_	Okuma=nesir
+18	tuvmış	tuv	VERB	_	Evident=Nfh|Tense=Past|Number=Sing|Person=3	13	advcl	_	Okuma=nesir|Not=doğ-_tanığı_70a/12
+19	.	.	PUNCT	_	_	13	punct	_	Okuma=nesir
+
+# sent_id = cc2.379a.03
+# text = Ave kız , kimden atasız kurtley tuvup Bėyimiz burulıp turgan ılannı basıp yançtı , ėrksiz kıldı .
+# kaynak_satirlar = cc2.379a.02 cc2.379a.03 cc2.379a.04 cc2.379a.05
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 69b/15 kıta 21 · kurtley tuvup
+# latince_kaynak = Ave, porta paradisi, 21. dörtlük
+# latince = Ave, de cuius germine sine virili semine sicut vermis concipitur
+# kopya_supesi = tuvup:birebir_kalk
+1	Ave	ave	INTJ	_	_	2	discourse	_	Okuma=nesir
+2	kız	kız	NOUN	_	Case=Nom	13	vocative	_	Okuma=nesir
+3	,	,	PUNCT	_	_	7	punct	_	Okuma=nesir
+4	kimden	kim	PRON	_	Case=Abl	7	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak;_ilgi_zamiri;_Lat._de_cuius_germine:_birebir_kalk
+5	atasız	atasız	ADJ	_	_	7	advmod	_	Okuma=nesir|Not=durum_bildiren
+6	kurtley	kurt	NOUN	_	Case=Equ	7	obl	_	YonetilenHal=Equ|Okuma=nesir|Not=eşitlik_hâli_-lAy
+7	tuvup	tuv	VERB	_	VerbForm=Conv	13	advcl	_	Okuma=nesir|Not=doğ-_tanığı_69b/15
+8	Bėyimiz	bėy	NOUN	_	Case=Nom|Number[psor]=Plur|Person[psor]=1	13	nsubj	_	Okuma=nesir
+9	burulıp	burul	VERB	_	VerbForm=Conv	11	acl	_	Okuma=nesir|Not=K1:_-(I)p_tur-_sıfat-fiil
+10	turgan	tur	AUX	_	VerbForm=Part	9	aux	_	Okuma=nesir|Periphrasis=Ip_tur
+11	ılannı	ılan	NOUN	_	Case=Acc	12	obj	_	YonetilenHal=Acc|Okuma=nesir
+12	basıp	bas	VERB	_	VerbForm=Conv	13	advcl	_	Okuma=nesir
+13	yançtı	yanç	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir
+14	,	,	PUNCT	_	_	16	punct	_	Okuma=nesir
+15	ėrksiz	ėrksiz	ADJ	_	_	16	xcomp	_	Okuma=nesir
+16	kıldı	kıl	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	13	conj	_	Okuma=nesir
+17	.	.	PUNCT	_	_	13	punct	_	Okuma=nesir
+
+# sent_id = cc2.377a.17
+# text = Ave , kız , kimniŋ tuvganı , iç közimizniŋ yarığı ėrip , azanını kutkardı , ölüminde uyutmadı .
+# kaynak_satirlar = cc2.377a.17 cc2.377a.18 cc2.377a.19 cc2.377a.20
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 69a/23-24 kıta 12 · kimniŋ tuvganı
+# latince_kaynak = Ave, porta paradisi, 12. dörtlük
+# latince = Ave, Mater salutaris, cuius ortu gratularis
+# kopya_supesi = tuvganı:birebir_kalk
+1	Ave	ave	INTJ	_	_	3	discourse	_	Okuma=nesir
+2	,	,	PUNCT	_	_	1	punct	_	Okuma=nesir
+3	kız	kız	NOUN	_	Case=Nom	14	vocative	_	Okuma=nesir
+4	,	,	PUNCT	_	_	6	punct	_	Okuma=nesir
+5	kimniŋ	kim	PRON	_	Case=Gen	6	nmod:poss	_	Okuma=nesir
+6	tuvganı	tuv	VERB	_	VerbForm=Part|Number[psor]=Sing|Person[psor]=3	14	nsubj	_	Okuma=nesir|Not=doğ-_tanığı_69a/23-24;_başsız_sıfat-fiil_özne
+7	,	,	PUNCT	_	_	10	punct	_	Okuma=nesir
+8	iç	iç	NOUN	_	_	9	compound	_	Okuma=nesir
+9	közimizniŋ	köz	NOUN	_	Case=Gen|Number[psor]=Plur|Person[psor]=1	10	nmod:poss	_	Okuma=nesir
+10	yarığı	yarık	NOUN	_	Number[psor]=Sing|Person[psor]=3	6	appos	_	Okuma=nesir
+11	ėrip	ėr	VERB	_	VerbForm=Conv	14	advcl	_	Okuma=nesir
+12	,	,	PUNCT	_	_	14	punct	_	Okuma=nesir
+13	azanını	azan	NOUN	_	Case=Acc|Number[psor]=Sing|Person[psor]=3	14	obj	_	YonetilenHal=Acc|Okuma=nesir|Not=okuma_belirsiz_(çeviri_“adamı”)
+14	kutkardı	kutkar	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir
+15	,	,	PUNCT	_	_	17	punct	_	Okuma=nesir
+16	ölüminde	ölüm	NOUN	_	Case=Loc|Number[psor]=Sing|Person[psor]=3	17	obl	_	YonetilenHal=Loc|Okuma=nesir
+17	uyutmadı	uyut	VERB	_	Mood=Ind|Polarity=Neg|Tense=Past|Number=Sing|Person=3	14	conj	_	Okuma=nesir
+18	.	.	PUNCT	_	_	14	punct	_	Okuma=nesir
+
+# sent_id = cc2.386a.28
+# text = Ave , kimge yaş yaşından us övretmiş Tėŋri tuvgan söz kim anıŋ köp taŋlarm ayta bilip-sėn barçasın .
+# kaynak_satirlar = cc2.386a.27 cc2.386a.28 cc2.386a.29 cc2.386a.30
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 72a/13-14 kıta 68 · Tėŋri tuvgan söz
+# latince_kaynak = Ave, porta paradisi, 68. dörtlük
+# latince = Ave, quam Deus aluit, quam Verbum Patris docuit
+# kopya_supesi = tuvgan:yok
+1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir|Not=hitap_edilen_“sen”_iki_ilgi_cümlesiyle_nitelenir
+2	,	,	PUNCT	_	_	7	punct	_	Okuma=nesir
+3	kimge	kim	PRON	_	Case=Dat	7	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=ilgi_zamiri
+4	yaş	yaş	ADJ	_	_	5	amod	_	Okuma=nesir
+5	yaşından	yaş	NOUN	_	Case=Abl|Number[psor]=Sing|Person[psor]=3	7	obl	_	YonetilenHal=Abl|Okuma=nesir
+6	us	us	NOUN	_	Case=Nom	7	obj	_	Okuma=nesir|Not=belirtisiz_nesne
+7	övretmiş	övret	VERB	_	Evident=Nfh|Tense=Past|Number=Sing|Person=3	1	acl	_	Okuma=nesir
+8	Tėŋri	Tėŋri	PROPN	_	Case=Nom	9	nsubj	_	YonetilenHal=Nom|Okuma=nesir|Not=Lat._Verbum_Patris_(Ave_porta_paradisi_68._dörtlük;_krş._59:_Verbum,_Deus_quod_genuit):_Tanrı'nın_doğurduğu_söz,_tuv-_geçişli;_kaynak_değil_özne
+9	tuvgan	tuv	VERB	_	VerbForm=Part	10	acl	_	Okuma=nesir|Not=doğ-_tanığı_72a/13-14
+10	söz	söz	NOUN	_	Case=Nom	7	nsubj	_	Okuma=nesir
+11	kim	kim	SCONJ	_	_	16	mark	_	Okuma=nesir|Not=K5_açık
+12	anıŋ	ol	PRON	_	Case=Gen|Number=Sing|Person=3	14	nmod:poss	_	Okuma=nesir
+13	köp	köp	ADJ	_	_	14	amod	_	Okuma=nesir
+14	taŋlarm	taŋ	NOUN	_	Number=Plur	15	obj	_	Okuma=nesir|Not=OCR/neşir:_taŋların_olmalı_(çeviri_“mucizelerinin”)
+15	ayta	ayt	VERB	_	VerbForm=Conv	16	xcomp	_	Okuma=nesir|Not=-A_bil-_yeterlik
+16	bilip-sėn	bil	VERB	_	Evident=Nfh|Number=Sing|Person=2	7	conj	_	Okuma=nesir
+17	barçasın	barça	PRON	_	Case=Acc|Number[psor]=Sing|Person[psor]=3	14	appos	_	YonetilenHal=Acc|Okuma=nesir
+18	.	.	PUNCT	_	_	1	punct	_	Okuma=nesir
+
+# sent_id = cc2.385a.13
+# text = Ave , kim bolmış-sėn aar ana kim Tėŋriden tuvar sözley ; alay bizge tėydi , ten kėyinip , Tėŋri sözi .
+# kaynak_satirlar = cc2.385a.12 cc2.385a.13 cc2.385a.14 cc2.385a.15
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 71b/15-16 kıta 59 · Tėŋriden tuvar
+# latince_kaynak = Ave, porta paradisi, 59. dörtlük
+# latince = Verbum, Deus quod genuit
+# kopya_supesi = tuvar:yok
+1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir
+2	,	,	PUNCT	_	_	4	punct	_	Okuma=nesir
+3	kim	kim	SCONJ	_	_	4	mark	_	Okuma=nesir|Not=K5_açık
+4	bolmış-sėn	bol	VERB	_	Evident=Nfh|Number=Sing|Person=2	1	acl	_	Okuma=nesir
+5	aar	ol	PRON	_	Case=Dat|Number=Sing|Person=3	4	obl	_	YonetilenHal=Dat|Okuma=nesir
+6	ana	ana	NOUN	_	Case=Nom	4	xcomp	_	Okuma=nesir
+7	kim	kim	SCONJ	_	_	9	mark	_	Okuma=nesir|Not=K5_açık
+8	Tėŋriden	Tėŋri	PROPN	_	Case=Abl	9	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak;_Lat._Verbum,_Deus_quod_genuit_(özne):_hâl_Latinceden_bağımsız
+9	tuvar	tuv	VERB	_	VerbForm=Part|Aspect=Hab	10	acl	_	Okuma=nesir|Not=doğ-_tanığı_71b/15-16;_geniş_zaman_sıfat-fiili
+10	sözley	söz	NOUN	_	Case=Equ	4	obl	_	YonetilenHal=Equ|Okuma=nesir|Not=eşitlik_hâli_-lAy
+11	;	;	PUNCT	_	_	14	punct	_	Okuma=nesir
+12	alay	alay	ADV	_	_	14	advmod	_	Okuma=nesir
+13	bizge	biz	PRON	_	Case=Dat|Number=Plur|Person=1	14	obl	_	YonetilenHal=Dat|Okuma=nesir
+14	tėydi	tėy	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	1	parataxis	_	Okuma=nesir
+15	,	,	PUNCT	_	_	17	punct	_	Okuma=nesir
+16	ten	ten	NOUN	_	Case=Nom	17	obj	_	Okuma=nesir
+17	kėyinip	kėyin	VERB	_	VerbForm=Conv	14	advcl	_	Okuma=nesir
+18	,	,	PUNCT	_	_	20	punct	_	Okuma=nesir
+19	Tėŋri	Tėŋri	PROPN	_	_	20	nmod:poss	_	Okuma=nesir
+20	sözi	söz	NOUN	_	Number[psor]=Sing|Person[psor]=3	14	nsubj	_	Okuma=nesir
+21	.	.	PUNCT	_	_	1	punct	_	Okuma=nesir
+
+# sent_id = cc2.394a.03
+# text = Dagı bir Bėyimiz Yesus Kristusga , Tėŋriniŋ yalguz tuvgan ovlu dėp kim barça zamanalardan burun Atadan tuvup turur , Tėŋri Tėŋriden , Yarıḫ Yarıḫtan , çın Tėŋri çın Tėŋriden , ėtilmey , Ataga tözdeş tuvup turur , andan ulam bar barça bolgan turur .
+# kaynak_satirlar = cc2.394a.03 cc2.394a.04 cc2.394a.05
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 74b/3-5 İnanç Duası · yalguz tuvgan, Atadan tuvup turur, tözdeş tuvup turur
+# latince_kaynak = Credo
+# latince = Filium Dei unigenitum
+# kopya_supesi = tuvgan:birebir_kalk tuvup:birebir_kalk
+1	Dagı	dagı	CCONJ	_	_	5	cc	_	Okuma=nesir
+2	bir	bir	NUM	_	NumType=Card	3	nummod	_	Okuma=nesir
+3	Bėyimiz	bėy	NOUN	_	Number[psor]=Plur|Person[psor]=1	5	nmod	_	Okuma=nesir
+4	Yesus	Yesus	PROPN	_	_	5	compound	_	Okuma=nesir
+5	Kristusga	Kristus	PROPN	_	Case=Dat	0	root	_	YonetilenHal=Dat|Okuma=nesir|Not=eksiltili:_önceki_cümlenin_“ınanır-mėn”_yükleminin_yönelme_tümleci_kök_yapıldı
+6	,	,	PUNCT	_	_	10	punct	_	Okuma=nesir
+7	Tėŋriniŋ	Tėŋri	PROPN	_	Case=Gen	10	nmod:poss	_	Okuma=nesir
+8	yalguz	yalguz	ADJ	_	_	9	advmod	_	Okuma=nesir
+9	tuvgan	tuv	VERB	_	VerbForm=Part	10	acl	_	Okuma=nesir|Not=doğ-_tanığı_74b/3;_Lat._unigenitum
+10	ovlu	ovul	NOUN	_	Number[psor]=Sing|Person[psor]=3	11	xcomp	_	Okuma=nesir
+11	dėp	dė	VERB	_	VerbForm=Conv	5	acl	_	Okuma=nesir
+12	kim	kim	SCONJ	_	_	17	mark	_	Okuma=nesir|Not=K5_açık;_Lat._qui
+13	barça	barça	DET	_	_	14	det	_	Okuma=nesir
+14	zamanalardan	zamana	NOUN	_	Case=Abl|Number=Plur	17	obl	_	YonetilenHal=uygulanmaz|Okuma=nesir|Not=çıkma_hâlini_“burun”_ilgeci_yönetir
+15	burun	burun	ADP	_	_	14	case	_	Okuma=nesir
+16	Atadan	ata	NOUN	_	Case=Abl	17	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak;_Lat._ex_Patre_natum:_birebir_kalk
+17	tuvup	tuv	VERB	_	VerbForm=Conv	5	acl	_	Okuma=nesir|Not=doğ-_tanığı_74b/3-4
+18	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	17	aux	_	Okuma=nesir|Periphrasis=Ip_tur|Not=K1
+19	,	,	PUNCT	_	_	20	punct	_	Okuma=nesir
+20	Tėŋri	Tėŋri	PROPN	_	_	5	appos	_	Okuma=nesir|Not=Lat._Deum_de_Deo
+21	Tėŋriden	Tėŋri	PROPN	_	Case=Abl	20	nmod	_	Okuma=nesir
+22	,	,	PUNCT	_	_	23	punct	_	Okuma=nesir
+23	Yarıḫ	yarıḫ	NOUN	_	_	20	conj	_	Okuma=nesir
+24	Yarıḫtan	yarıḫ	NOUN	_	Case=Abl	23	nmod	_	Okuma=nesir
+25	,	,	PUNCT	_	_	27	punct	_	Okuma=nesir
+26	çın	çın	ADJ	_	_	27	amod	_	Okuma=nesir
+27	Tėŋri	Tėŋri	PROPN	_	_	20	conj	_	Okuma=nesir
+28	çın	çın	ADJ	_	_	29	amod	_	Okuma=nesir
+29	Tėŋriden	Tėŋri	PROPN	_	Case=Abl	27	nmod	_	Okuma=nesir
+30	,	,	PUNCT	_	_	31	punct	_	Okuma=nesir
+31	ėtilmey	ėt	VERB	_	VerbForm=Conv|Polarity=Neg|Voice=Pass	35	advcl	_	Okuma=nesir|Not=Lat._non_factum
+32	,	,	PUNCT	_	_	35	punct	_	Okuma=nesir
+33	Ataga	ata	NOUN	_	Case=Dat	34	obl	_	YonetilenHal=uygulanmaz|Okuma=nesir|Not=yönelme_hâlini_“tözdeş”_yönetir,_tuv-_değil_(bağlanma_testi)
+34	tözdeş	tözdeş	ADJ	_	_	35	xcomp	_	Okuma=nesir|Not=Lat._consubstantialem
+35	tuvup	tuv	VERB	_	VerbForm=Conv	17	conj	_	Okuma=nesir|Not=doğ-_tanığı_74b/5
+36	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	35	aux	_	Okuma=nesir|Periphrasis=Ip_tur
+37	,	,	PUNCT	_	_	42	punct	_	Okuma=nesir
+38	andan	ol	PRON	_	Case=Abl|Number=Sing|Person=3	42	obl	_	YonetilenHal=Abl|Okuma=nesir
+39	ulam	ulam	ADP	_	_	38	case	_	Okuma=nesir|Not=“aracılığıyla”;_okuma_belirsiz
+40	bar	bar	ADJ	_	_	41	amod	_	Okuma=nesir
+41	barça	barça	PRON	_	Case=Nom	42	nsubj	_	Okuma=nesir
+42	bolgan	bol	VERB	_	VerbForm=Part	17	conj	_	Okuma=nesir
+43	turur	tur	AUX	_	Aspect=Hab|Number=Sing|Person=3	42	aux	_	Okuma=nesir|Periphrasis=Ip_tur
+44	.	.	PUNCT	_	_	5	punct	_	Okuma=nesir
+
+# sent_id = cc2.397a.29
+# text = Munıŋ dėy taŋış kim kördi , kuru çıbuḫ yėmiş bėrdi , kızdan Atası töredi , töretteçi yaŋla tuvdı .
+# kaynak_satirlar = cc2.397a.27 cc2.397a.28 cc2.397a.29 cc2.397a.30
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 76a/13-14 kıta 10 · kızdan Atası töredi, yaŋla tuvdı
+# latince_kaynak = A solis ortus cardine (kıta belirlenemedi)
+# kopya_supesi = bėrdi:belirlenemez tuvdı:belirlenemez töredi:belirlenemez
+1	Munıŋ	bu	PRON	_	Case=Gen	3	nmod	_	Okuma=nesir
+2	dėy	dėy	ADP	_	_	1	case	_	Okuma=nesir|Not=“gibi”
+3	taŋış	taŋış	NOUN	_	Case=Nom	5	obj	_	Okuma=nesir
+4	kim	kim	PRON	_	Case=Nom	5	nsubj	_	Okuma=nesir|Not=soru_zamiri
+5	kördi	kör	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir
+6	,	,	PUNCT	_	_	10	punct	_	Okuma=nesir
+7	kuru	kuru	ADJ	_	_	8	amod	_	Okuma=nesir
+8	çıbuḫ	çıbuḫ	NOUN	_	Case=Nom	10	nsubj	_	Okuma=nesir
+9	yėmiş	yėmiş	NOUN	_	Case=Nom	10	compound:lvc	_	Okuma=nesir|Not=bėr-_birleşik_fiil_(dizin_anlam_3)
+10	bėrdi	bėr	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	5	parataxis	_	Okuma=nesir|Not=bėr-_tanığı_76a/13
+11	,	,	PUNCT	_	_	14	punct	_	Okuma=nesir
+12	kızdan	kız	NOUN	_	Case=Abl	14	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak
+13	Atası	ata	NOUN	_	Number[psor]=Sing|Person[psor]=3	14	nsubj	_	Okuma=nesir
+14	töredi	töre	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	5	parataxis	_	Okuma=nesir|Not=töre-_tanığı_76a/13-14
+15	,	,	PUNCT	_	_	18	punct	_	Okuma=nesir
+16	töretteçi	töret	NOUN	_	_	18	nsubj	_	Okuma=nesir|Not=yaratan
+17	yaŋla	yaŋla	ADV	_	_	18	advmod	_	Okuma=nesir
+18	tuvdı	tuv	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	5	parataxis	_	Okuma=nesir|Not=doğ-_tanığı_76a/14
+19	.	.	PUNCT	_	_	5	punct	_	Okuma=nesir
+
+# sent_id = cc2.396a.08
+# text = Kün tuvuşnıŋ buçgakından batışdagı kırıvga dėyin ėrkli Kristusnı öveli , kız anadan dėp töredi .
+# kaynak_satirlar = cc2.396a.08 cc2.396a.09 cc2.396a.10 cc2.396a.11
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 76a/1-2 kıta 1 · kız anadan dėp töredi
+# latince_kaynak = A solis ortus cardine, 1. kıta
+# latince = Christum canamus principem natum Maria virgine
+# kopya_supesi = töredi:birebir_kalk
+1	Kün	kün	NOUN	_	_	2	compound	_	Okuma=nesir|Not=“kün_tuvuş”_doğu
+2	tuvuşnıŋ	tuvuş	NOUN	_	Case=Gen	3	nmod:poss	_	Okuma=nesir|Not=türemiş_ad_(K3_kapsamı)
+3	buçgakından	buçgak	NOUN	_	Case=Abl|Number[psor]=Sing|Person[psor]=3	9	obl	_	YonetilenHal=Abl|Okuma=nesir
+4	batışdagı	batış	ADJ	_	_	5	amod	_	Okuma=nesir|Not=+dagı
+5	kırıvga	kırıv	NOUN	_	Case=Dat	9	obl	_	YonetilenHal=uygulanmaz|Okuma=nesir|Not=yönelme_hâlini_“dėyin”_ilgeci_yönetir
+6	dėyin	dėyin	ADP	_	_	5	case	_	Okuma=nesir
+7	ėrkli	ėrkli	ADJ	_	_	8	amod	_	Okuma=nesir
+8	Kristusnı	Kristus	PROPN	_	Case=Acc	9	obj	_	YonetilenHal=Acc|Okuma=nesir
+9	öveli	öv	VERB	_	Mood=Opt|Number=Plur|Person=1	0	root	_	Okuma=nesir
+10	,	,	PUNCT	_	_	14	punct	_	Okuma=nesir
+11	kız	kız	NOUN	_	_	12	nmod	_	Okuma=nesir
+12	anadan	ana	NOUN	_	Case=Abl	14	obl	_	YonetilenHal=Abl|Okuma=nesir|Not=K3_kaynak;_Lat._natum_Maria_virgine_(ablatif):_birebir_kalk
+13	dėp	dė	SCONJ	_	_	14	mark	_	Okuma=nesir|Not=“diye”_yüklemden_önce_(çeviri/manzum_sırası)
+14	töredi	töre	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	9	advcl	_	Okuma=nesir|Not=töre-_tanığı_76a/1-2
+15	.	.	PUNCT	_	_	9	punct	_	Okuma=nesir
+
+# sent_id = cc2.398a.13
+# text = Tuvurur Ataga ögünç , tuvgan ovluna bėyenç , Arı Tınga sövünç bolsun , tėŋ tabuḫ üç tėŋdeşge tėysin .
+# kaynak_satirlar = cc2.398a.12 cc2.398a.13 cc2.398a.14 cc2.398a.15
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 76a/17 kıta 13 · tuvgan ovluna
+# latince_kaynak = Doksoloji kalıbı (aday, metin elde yok)
+# kopya_supesi = tuvgan:belirlenemez tuvurur:belirlenemez
+1	Tuvurur	tuvur	VERB	_	VerbForm=Part|Aspect=Hab	2	acl	_	Okuma=nesir|Not=doğur-_tanığı_76a/17
+2	Ataga	ata	NOUN	_	Case=Dat	3	nmod	_	YonetilenHal=Dat|Okuma=nesir|Not=eksiltili:_“bolsun”_paylaşılıyor
+3	ögünç	ögünç	NOUN	_	Case=Nom	11	conj	_	Okuma=nesir
+4	,	,	PUNCT	_	_	7	punct	_	Okuma=nesir
+5	tuvgan	tuv	VERB	_	VerbForm=Part	6	acl	_	Okuma=nesir|Not=doğ-_tanığı_76a/17
+6	ovluna	ovul	NOUN	_	Case=Dat|Number[psor]=Sing|Person[psor]=3	7	nmod	_	YonetilenHal=Dat|Okuma=nesir
+7	bėyenç	bėyenç	NOUN	_	Case=Nom	11	conj	_	Okuma=nesir
+8	,	,	PUNCT	_	_	11	punct	_	Okuma=nesir
+9	Arı	arı	ADJ	_	_	10	amod	_	Okuma=nesir
+10	Tınga	tın	NOUN	_	Case=Dat	12	obl	_	YonetilenHal=Dat|Okuma=nesir
+11	sövünç	sövünç	NOUN	_	Case=Nom	12	nsubj	_	Okuma=nesir
+12	bolsun	bol	VERB	_	Mood=Imp|Number=Sing|Person=3	0	root	_	Okuma=nesir
+13	,	,	PUNCT	_	_	18	punct	_	Okuma=nesir
+14	tėŋ	tėŋ	ADJ	_	_	15	amod	_	Okuma=nesir
+15	tabuḫ	tabuḫ	NOUN	_	Case=Nom	18	nsubj	_	Okuma=nesir
+16	üç	üç	NUM	_	NumType=Card	17	nummod	_	Okuma=nesir
+17	tėŋdeşge	tėŋdeş	NOUN	_	Case=Dat	18	obl	_	YonetilenHal=Dat|Okuma=nesir
+18	tėysin	tėy	VERB	_	Mood=Imp|Number=Sing|Person=3	12	conj	_	Okuma=nesir
+19	.	.	PUNCT	_	_	12	punct	_	Okuma=nesir
+
+# sent_id = cc2.332a.03
+# text = kün tuvmasdan burun
+# kaynak_satirlar = cc2.332a.03
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 57b/19 sözlük · kün tuvmasdan burun
+# latince_kaynak = sözlük bölümü
+# kopya_supesi = tuvmasdan:belirlenemez
+1	kün	kün	NOUN	_	Case=Nom	2	nsubj	_	Okuma=nesir
+2	tuvmasdan	tuv	VERB	_	VerbForm=Conv|Polarity=Neg	0	root	_	Okuma=nesir|Not=doğ-_tanığı_57b/19;_-mAsdAn_burun_“-madan_önce”
+3	burun	burun	ADP	_	_	2	case	_	Okuma=nesir|Not=sözlük_maddesi:_cümle_değil
+
+# sent_id = cc2.363a.23
+# text = Kündegi ötmekimizni bizge bugün bėrgil
+# kaynak_satirlar = cc2.363a.23
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 63b/29 Babamız · bizge bugün bėrgil
+# latince_kaynak = Pater noster (Matta 6:11)
+# latince = panem nostrum quotidianum da nobis hodie
+# kopya_supesi = bėrgil:olasi_kalk
+1	Kündegi	kündegi	ADJ	_	_	2	amod	_	Okuma=nesir|Not=kün+DA+kI
+2	ötmekimizni	ötmek	NOUN	_	Case=Acc|Number[psor]=Plur|Person[psor]=1	5	obj	_	YonetilenHal=Acc|Okuma=nesir|Not=Lat._panem_nostrum
+3	bizge	biz	PRON	_	Case=Dat|Number=Plur|Person=1	5	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=K4_alıcı;_Lat._nobis_(datif_örtüşüyor,_bėr-_için_Kıpçakçada_da_doğal)
+4	bugün	bugün	ADV	_	_	5	advmod	_	Okuma=nesir|Not=Lat._hodie
+5	bėrgil	bėr	VERB	_	Mood=Imp|Number=Sing|Person=2	0	root	_	Okuma=nesir|Not=bėr-_tanığı_63b/29;_cümle_“dagı_…”_ile_sürüyor_(ilk_istek)
+
+# sent_id = cc2.374a.09
+# text = Yalgan tanıḫlık bėrmegil .
+# kaynak_satirlar = cc2.374a.09
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 66b/8 On emir · tanıḫlık bėrmegil
+# latince_kaynak = Decalogus (Çıkış 20:16)
+# latince = Non loqueris contra proximum tuum falsum testimonium
+# kopya_supesi = bėrmegil:yok
+1	Yalgan	yalgan	ADJ	_	_	2	amod	_	Okuma=nesir
+2	tanıḫlık	tanıḫlık	NOUN	_	Case=Nom	3	obj	_	Okuma=nesir|Not=belirtisiz_nesne;_birleşik_fiil_adayı_(compound:lvc?);_Lat._loqueris_…_falsum_testimonium
+3	bėrmegil	bėr	VERB	_	Mood=Imp|Number=Sing|Person=2|Polarity=Neg	0	root	_	Okuma=nesir|Not=bėr-_tanığı_66b/8
+4	.	.	PUNCT	_	_	3	punct	_	Okuma=nesir
+
+# sent_id = cc2.386a.07
+# text = Ave , yėr-sėn yemiş bėrgen , Hava sıgıtın kėtergen , aŋar kimler kim ınangay , Tėŋrini körüp kovangay .
+# kaynak_satirlar = cc2.386a.07 cc2.386a.08 cc2.386a.09 cc2.386a.10
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 72a/5 kıta 64 · yėmiş bėrgen
+# latince_kaynak = Ave, porta paradisi, 64. dörtlük
+# latince = Ave, terra, ferens Fructum
+# kopya_supesi = bėrgen:birebir_kalk
+1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir
+2	,	,	PUNCT	_	_	3	punct	_	Okuma=nesir
+3	yėr-sėn	yėr	NOUN	_	Case=Nom|Number=Sing|Person=2	1	parataxis	_	Okuma=nesir|Not=ad_yüklem_+_2._kişi_eki_(-mėn/-sėn_kararı_açık)
+4	yemiş	yėmiş	NOUN	_	Case=Nom	5	obj	_	Okuma=nesir|Not=belirtisiz_nesne
+5	bėrgen	bėr	VERB	_	VerbForm=Part	3	acl	_	Okuma=nesir|Not=bėr-_tanığı_72a/5;_Lat._terra_ferens_Fructum_(birebir_kalk)
+6	,	,	PUNCT	_	_	9	punct	_	Okuma=nesir
+7	Hava	Hava	PROPN	_	_	8	nmod:poss	_	Okuma=nesir|Not=eksiz_tamlayan
+8	sıgıtın	sıgıt	NOUN	_	Case=Acc|Number[psor]=Sing|Person[psor]=3	9	obj	_	YonetilenHal=Acc|Okuma=nesir|Not=Lat._qui_detersit_Evae_luctum
+9	kėtergen	kėter	VERB	_	VerbForm=Part	5	conj	_	Okuma=nesir
+10	,	,	PUNCT	_	_	14	punct	_	Okuma=nesir
+11	aŋar	ol	PRON	_	Case=Dat|Number=Sing|Person=3	14	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=ınan-_yönelme_istemi
+12	kimler	kim	PRON	_	Number=Plur	18	nsubj	_	Okuma=nesir
+13	kim	kim	SCONJ	_	_	14	mark	_	Okuma=nesir|Not=K5_açık
+14	ınangay	ınan	VERB	_	Mood=Opt|Number=Sing|Person=3	12	acl	_	Okuma=nesir|Not=Lat._quod_qui_pie_confitentur
+15	,	,	PUNCT	_	_	18	punct	_	Okuma=nesir
+16	Tėŋrini	Tėŋri	PROPN	_	Case=Acc	17	obj	_	YonetilenHal=Acc|Okuma=nesir
+17	körüp	kör	VERB	_	VerbForm=Conv	18	advcl	_	Okuma=nesir
+18	kovangay	kovan	VERB	_	Mood=Opt|Number=Sing|Person=3	1	parataxis	_	Okuma=nesir|Not=Lat._vultu_Dei_perfruentur
+19	.	.	PUNCT	_	_	18	punct	_	Okuma=nesir
+
+# sent_id = cc2.385a.09
+# text = Ave , mėŋü tınç konuşıŋ ėrür yėri arılarnıŋ ; bu karavnı saa bėrdi , togus ay kim sėnde kondı .
+# kaynak_satirlar = cc2.385a.07 cc2.385a.08 cc2.385a.09 cc2.385a.10
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 71b/14 kıta 58 · karavnı saa bėrdi
+# latince_kaynak = Ave, porta paradisi, 58. dörtlük
+# latince = quieta commoratio, felix sanctorum mansio
+# kopya_supesi = bėrdi:yok
+1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir
+2	,	,	PUNCT	_	_	5	punct	_	Okuma=nesir
+3	mėŋü	mėŋü	ADJ	_	_	5	amod	_	Okuma=nesir
+4	tınç	tınç	ADJ	_	_	5	amod	_	Okuma=nesir|Not=Lat._quieta_commoratio
+5	konuşıŋ	konuş	NOUN	_	Case=Nom|Number[psor]=Sing|Person[psor]=2	7	nsubj	_	Okuma=nesir
+6	ėrür	ėr	AUX	_	Aspect=Hab|Number=Sing|Person=3	7	cop	_	Okuma=nesir|Not=ek-fiil
+7	yėri	yėr	NOUN	_	Case=Nom|Number[psor]=Sing|Person[psor]=3	1	parataxis	_	Okuma=nesir|Not=Lat._sanctorum_mansio
+8	arılarnıŋ	arı	NOUN	_	Case=Gen|Number=Plur	7	nmod:poss	_	Okuma=nesir
+9	;	;	PUNCT	_	_	7	punct	_	Okuma=nesir
+10	bu	bu	DET	_	_	11	det	_	Okuma=nesir
+11	karavnı	karav	NOUN	_	Case=Acc	13	obj	_	YonetilenHal=Acc|Okuma=nesir
+12	saa	sėn	PRON	_	Case=Dat|Number=Sing|Person=2	13	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=K4_alıcı
+13	bėrdi	bėr	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	1	parataxis	_	Okuma=nesir|Not=bėr-_tanığı_71b/14;_Latincede_vermek_fiili_yok_(Kıpçakça_seçim)
+14	,	,	PUNCT	_	_	13	punct	_	Okuma=nesir
+15	togus	togus	NUM	_	_	16	nummod	_	Okuma=nesir
+16	ay	ay	NOUN	_	Case=Nom	19	obl	_	Okuma=nesir|Not=süre_(eklenti);_obl:tmod_adayı
+17	kim	kim	SCONJ	_	_	19	mark	_	Okuma=nesir|Not=K5_açık
+18	sėnde	sėn	PRON	_	Case=Loc|Number=Sing|Person=2	19	obl	_	YonetilenHal=Loc|Okuma=nesir
+19	kondı	kon	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	11	acl	_	Okuma=nesir|Not=karav'ı_niteler
+20	.	.	PUNCT	_	_	13	punct	_	Okuma=nesir
+
+# sent_id = cc2.381a.31
+# text = Ave saa kim tözlikiŋ yöpsinip yaratkanıŋ biriktiriptir ogluŋa , birikgenni bėrdi saa .
+# kaynak_satirlar = cc2.381a.28 cc2.381a.29 cc2.381a.30 cc2.381a.31
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 70b/12 kıta 38 · birikgenni bėrdi saa
+# latince_kaynak = Ave, porta paradisi, 38. dörtlük
+# latince = Ave, cuius substantia apud Deum in gloria
+# kopya_supesi = bėrdi:yok
+1	Ave	ave	INTJ	_	_	0	root	_	Okuma=nesir
+2	saa	sėn	PRON	_	Case=Dat|Number=Sing|Person=2	1	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=selamın_yöneldiği_kişi
+3	kim	kim	SCONJ	_	_	7	mark	_	Okuma=nesir|Not=K5_açık
+4	tözlikiŋ	tözlik	NOUN	_	Number[psor]=Sing|Person[psor]=2	7	obj	_	Okuma=nesir|Not=belirtme_eki_yüzeyde_yok_(iyelikli_nesne?);_Lat._cuius_substantia;_okuma_belirsiz
+5	yöpsinip	yöpsin	VERB	_	VerbForm=Conv	6	advcl	_	Okuma=nesir
+6	yaratkanıŋ	yarat	VERB	_	VerbForm=Part|Number[psor]=Sing|Person[psor]=2	4	acl	_	Okuma=nesir|Not=çözümleme_belirsiz
+7	biriktiriptir	biriktir	VERB	_	Evident=Nfh|Tense=Past|Number=Sing|Person=3	2	acl	_	Okuma=nesir
+8	ogluŋa	ogul	NOUN	_	Case=Dat|Number[psor]=Sing|Person[psor]=2	7	obl	_	YonetilenHal=Dat|Okuma=nesir
+9	,	,	PUNCT	_	_	7	punct	_	Okuma=nesir
+10	birikgenni	birik	VERB	_	VerbForm=Part|Case=Acc	11	obj	_	YonetilenHal=Acc|Okuma=nesir|Not=başsız_sıfat-fiil
+11	bėrdi	bėr	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	7	conj	_	Okuma=nesir|Not=bėr-_tanığı_70b/12;_Latincede_vermek_fiili_yok_(Kıpçakça_seçim)
+12	saa	sėn	PRON	_	Case=Dat|Number=Sing|Person=2	11	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=K4_alıcı
+13	.	.	PUNCT	_	_	11	punct	_	Okuma=nesir
+
+# sent_id = cc2.352a.12
+# text = 01 sözni ayttı da canın Tėŋeri ėline bėrdi .
+# kaynak_satirlar = cc2.352a.12
+# etiketleyici = Claude (ön etiket, denetlenmedi)
+# tarih = 2026-11-24
+# kilavuz = 0.2
+# not = 61b/21 Stefanos · canın Tėŋeri ėline bėrdi
+# latince_kaynak = 10. Aziz Stefanos vaazı (krş. Elçilerin İşleri 7:59 "suscipe spiritum meum"; elde yok)
+# kopya_supesi = bėrdi:belirlenemez
+1	01	ol	DET	_	_	2	det	_	Okuma=nesir|Not=OCR:_Ol
+2	sözni	söz	NOUN	_	Case=Acc	3	obj	_	YonetilenHal=Acc|Okuma=nesir
+3	ayttı	ayt	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	0	root	_	Okuma=nesir
+4	da	da	CCONJ	_	_	8	cc	_	Okuma=nesir
+5	canın	can	NOUN	_	Case=Acc|Number[psor]=Sing|Person[psor]=3	8	obj	_	YonetilenHal=Acc|Okuma=nesir
+6	Tėŋeri	Tėŋeri	PROPN	_	_	7	nmod:poss	_	Okuma=nesir|Not=eksiz_tamlayan
+7	ėline	ėl	NOUN	_	Case=Dat|Number[psor]=Sing|Person[psor]=3	8	obl	_	YonetilenHal=Dat|Okuma=nesir|Not=K4_alıcı_(“Tanrı'nın_eline”)
+8	bėrdi	bėr	VERB	_	Mood=Ind|Tense=Past|Number=Sing|Person=3	3	conj	_	Okuma=nesir|Not=bėr-_tanığı_61b/21;_krş._Elç._7:59_(elde_yok)
+9	.	.	PUNCT	_	_	3	punct	_	Okuma=nesir

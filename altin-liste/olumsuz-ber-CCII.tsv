@@ -1,0 +1,10 @@
+# Gevşek "bėr-" aramasında (bėr/ber ile başlayan sözcükler) gelen ama bėr- "vermek" tanığı olmayan yerler.
+# tur: farkli_sozcuk (başka kök), turev_fiil (çatı ekli gövde; dizinde ayrı madde, bu fiilin tanığı sayılmaz), katman_sizintisi (metin katmanına girmiş Türkçe çeviri ya da editör notu satırı), belirsiz (elle bakılmalı)
+satir	bicim	tur	neden
+cc2.374a.26	bėri	farkli_sozcuk	bėri "beri" (ilgeç: kėlgenden bėri)
+cc2.374a.26	beri	farkli_sozcuk	sözlük maddesinin Türkçe karşılığı
+cc2.403a.32	bereket	farkli_sozcuk	sözlük maddesinin Türkçe karşılığı
+cc2.373a.26	bėrilgen	turev_fiil	bėril- "verilmek" (edilgen)
+cc2.389a.26	bėrilip	turev_fiil	bėril- "verilmek" (edilgen); dünyege tirilik bėrilip turur
+cc2.405a.25	bėrindim	turev_fiil	bėrin- (dönüşlü)
+cc2.407a.05	bėrişir-mėn	turev_fiil	bėriş- "yardım etmek"

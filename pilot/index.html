@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metin Havuzu</title>
+<link rel="icon" href="favicon-32.png" type="image/png">
+<link rel="stylesheet" href="fontlar.css?v=20261124200008">
+<link rel="stylesheet" href="app.css?v=20261124200008">
+<meta name="description" content="Codex Cumanicus ve çağdaş Türkçe metinlerde tanık arama: her sonuç kaynak sayfasına ve Türkçe çevirisine bağlı.">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<a class="atla" href="#icerik">İçeriğe atla</a>
+<header class="ust">
+  <a class="marka" href="#/"><img src="logo.svg" alt="Metin Havuzu" height="26"></a>
+  <nav>
+    <a href="#/" id="nav-ara">Arama</a>
+    <a href="#/karsilastir" id="nav-karsi">Karşılaştır</a>
+    <a href="#/etiketler" id="nav-etiket">Etiketle</a>
+    <a href="#/altin" id="nav-altin">Altın liste</a>
+    <a href="#/yapilacaklar" id="nav-yap">Yapılacaklar</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-motif" aria-hidden="true"><img class="m-geyik" src="motif/geyik.webp" alt=""><img class="m-kurt" src="motif/kurt.webp" alt=""><img class="m-dogan" src="motif/dogan.webp" alt=""><img class="m-nar" src="motif/nar.webp" alt=""><img class="m-yildiz" src="motif/yildiz.webp" alt=""><img class="m-dagkecisi" src="motif/dagkecisi.webp" alt=""></div>
+  <h1>Tarihî ve çağdaş Türkçe metinlerde tanık arayın</h1>
+  <p>Çevriyazı harflerini klavyeden ya da aşağıdaki tuşlardan yazın; her sonuç kaynak sayfasına ve Türkçe çevirisine bağlıdır.</p>
+  <form class="arama" id="form" role="search">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" autocomplete="off" spellcheck="false" placeholder="Biçim ara: tuv, tog, tengri…" aria-label="Arama">
+    <div class="kip" role="group" aria-label="Arama kipi">
+      <button type="button" data-kip="gevsek" aria-pressed="true" title="e = ė, n/ng = ŋ, h/x = ḫ">Gevşek</button>
+      <button type="button" data-kip="tam" aria-pressed="false" title="Yazılan harf aynen aranır">Tam</button>
+    </div>
+    <button class="ara-dugme" type="submit">Ara</button>
+  </form>
+  <div class="klavye" id="klavye" aria-label="Sanal klavye"></div>
+  <div class="ipucu">Enter ile arayın · kısa yol <kbd>e:</kbd> ė <kbd>n:</kbd> ŋ <kbd>h:</kbd> ḫ
+    <label><input type="checkbox" id="basta" checked> sözcük başında</label>
+    <label><input type="checkbox" id="dizinli"> dizin ve dipnotlar</label>
+  </div>
+  <div class="ornekler" id="ornekler"></div>
+</section>
+
+<main id="icerik"></main>
+
+<footer class="alt-bilgi">
+  <div class="motif-dizi" aria-hidden="true"><img src="motif/yazit.webp" alt=""><img src="motif/kurt.webp" alt=""><img src="motif/lale.webp" alt=""><img src="motif/gunes.webp" alt=""><img src="motif/madalyon.webp" alt=""><img src="motif/sanirak.webp" alt=""><img src="motif/nar.webp" alt=""><img src="motif/at.webp" alt=""><img src="motif/dogan.webp" alt=""></div>
+  <p>Metin Havuzu · tarihî ve çağdaş Türkçe söz dizimi derlemi</p>
+</footer>
+
+<script src="veri/veri.js?v=20261124200008"></script>
+<script src="veri/boun.js?v=20261124200008"></script>
+<script src="etiket.js?v=20261124200008"></script>
+<script src="app.js?v=20261124200008"></script>
+</body>
+</html>

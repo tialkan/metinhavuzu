@@ -1,0 +1,8 @@
+.claude/
+.DS_Store
+*.env
+.env*
+!.env.example
+rapor-gorseller/
+Metin-Havuzu-Surec-Raporu.pdf
+Metin-Havuzu-Model-Is-Akisi.pdf

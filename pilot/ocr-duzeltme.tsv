@@ -1,0 +1,4 @@
+# OCR düzeltme kaydı (diplomatik metin katmanı K1). Her satır bir düzeltmedir; metin derlenirken uygulanır.
+# islem: ekle = önceki satırdan sonra eksik satırı ekle. Gerekçe ve denetim kaynağı zorunludur.
+pdf	islem	onceki_satir_baslangici	yeni_metin	gerekce	denetleyen	tarih
+43	ekle	22b vakşı bögeyip barır	23 b. aytıp ye bėriŋiz "söyle bakalım, lütfen söyleyiveriniz"	ABBYY bu satırı okumamış (sağ sayfa eğik); kitap s. 407 görüntüsünden okundu. bėr- altın listesinin 82a/23 b tanığı.	Claude (görüntü), araştırmacı onayı bekliyor	2026-11-24
