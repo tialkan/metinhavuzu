@@ -56,3 +56,11 @@ Projeye doğrudan yararı olan yerler (PDF sayfa numaraları):
 ## Codex Cumanicus I (İtalyan bölümü) · Ünal 2010
 Orçun Ünal, *Kodeks Kumanikus 1a-55a (Giriş-Metin-Dizin)*, tez, Nisan 2010; danışman Prof. Dr. Gülşen Seyhan Alışık (YÖK Ulusal Tez Merkezi, tez no. büyük olasılıkla 274478). 333 sayfa: giriş (yazım, ses, biçim, söz varlığı), Latince-Farsça-Kumanca sözlüğün çeviri yazısı, dizin. Telifli; yalnız proje içi kullanım, özel veri deposunda (`pilot/veri/_kaynak/cc1-unal-2010/`).
 Projede kullanımı: doğ-/kėl-/bėr- fiillerinin CC I'deki Latince karşılıklı çekim dizileri ve tuv- ~ tog- değişkenliğine kanıt (19a: *togarmen, togdum, toggıl, togmak* asıl yazıcı; *⟨tuarmen⟩ ≈ tu[v]armen* ikinci/üçüncü el eki; giriş: ET *twg-* > CC *tog- ~ tuv-*). CC II söz dizimi derlemine metin olarak eklenmez (CC I bir sözlüktür).
+
+### Ünsal 2019 — Codex Cumanicus'un söz dizimi
+ÜNSAL, Ümmühan (2019). *Codex Cumanicus'un Söz Dizimi*. Yüksek lisans tezi, Erciyes Üniversitesi SBE (danışman: Galip Güner). YÖK Tez Merkezi, PDF açık, 368 s.
+- Temel metin Argunşah & Güner 2015, yöntem Karahan *Türkçenin Söz Dizimi*; örnek adresleri bizim yaprak-satır biçimimizle aynı (ör. 69a-17) → tanıklara doğrudan bağlanabilir.
+- *-(I)p tur-* "tezlik fiili" olarak sınıflanmış (s. 153–154: *çıgarıp turgan* "çıkarıveren", *küyüp turuptır-mėn* "bekliyorum"); bizim `Periphrasis=Ip_tur` için karşı görüş, K kaydında anılmalı.
+- Sonuç (s. 342–346): devrik yapı ve tamlama içine öge girmesi yaygın; tez bunu yazarların Kıpçakçayı iyi bilmemesine bağlıyor. Latince kaynak karşılaştırması yapılmamış — bizim kalk eşlemesi alternatif açıklama sunuyor.
+- Yükleme eki almamış belirtili nesne ve yer tamlayıcısı ekli sebep/zaman zarfları saptanmış: `YonetilenHal` kararları için tanık listesi.
+- Kimlik bağlantısı: `pilot/veri/tanik/unsal2019.tsv` (özel veri deposu; tez alıntıları telifli). 2622 örnekten 1721'i, 656 ayrı satır kimliğine metin benzerliğiyle (harf üçlüsü, aynı yaprak içinde, eşik 0,5) bağlandı; 1420'si tam eşleşme. Altın tanıkların karşılığı: doğ- 24/36, kėl- 25/37, bėr- 17/24.

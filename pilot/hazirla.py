@@ -9,6 +9,7 @@ Kullanım: python3 pilot/hazirla.py /yol/188Sayfa_Codex_Cumanicus_II_ABBYY_Fine_
   satır içi   sözlük bölümlerinde satırdaki tırnak içi Türkçe karşılık
   paragraf    düzyazıda bölümün n. Kıpçakça paragrafı ile n. Türkçe paragrafı (yalnız sayılar eşitse)
 """
+import csv
 import html
 import os
 import json
@@ -31,6 +32,20 @@ BASLIK_RE = re.compile(r"^\d{1,2}\.\s+[A-ZÇĞİÖŞÜ][\w'’]+.*\s\S+")  # ör
 
 
 KIMLIK = KOK.parent / "kimlik"
+
+
+def inceleme_atiflari():
+    """Ünsal 2019 tezinde örnek olarak geçen satırlar: kimlik -> tez sayfaları (yalnız sayfa numarası; alıntı yayımlanmaz)."""
+    yol = VERI / "tanik" / "unsal2019.tsv"
+    if not yol.exists():
+        return {}
+    out = {}
+    for r in csv.DictReader(yol.open(encoding="utf-8"), delimiter="\t"):
+        if float(r["skor"] or 0) < 0.8:
+            continue
+        for k in filter(None, r["kimlik"].split(",")):
+            out.setdefault(k, set()).add(int(r["tez_sayfa"]))
+    return {k: sorted(v) for k, v in out.items()}
 
 
 def olumsuz_listeler():
@@ -509,7 +524,7 @@ def main():
     bolum_ceviri.update(ttl_ceviri)
     veri = {"kaynak": "Argunşah & Güner 2015, Codex Cumanicus, Kesit; izinli CC II bölümü (ABBYY OCR) · UD Turkish BOUN (CC BY-SA 4.0)",
             "sayfalar": sayfalar, "satirlar": satirlar, "bolum_ceviri": bolum_ceviri, "envanter": envanter.most_common(), "altin": altin,
-            "paralel": paralel_metinler(), "derlemler": DERLEMLER, "cozumleme": ttl_cozum, "altin_kel": altin_kel, "altin_ber": altin_ber, "olumsuz": olumsuz_listeler(), "kayitli_conllu": "\n".join(f.read_text(encoding="utf-8") for f in sorted((KOK.parent / "etiketler").glob("*.conllu")))}
+            "paralel": paralel_metinler(), "derlemler": DERLEMLER, "cozumleme": ttl_cozum, "altin_kel": altin_kel, "altin_ber": altin_ber, "olumsuz": olumsuz_listeler(), "inceleme": inceleme_atiflari(), "kayitli_conllu": "\n".join(f.read_text(encoding="utf-8") for f in sorted((KOK.parent / "etiketler").glob("*.conllu")))}
     (VERI / "veri.js").write_text("window.VERI = " + json.dumps(veri, ensure_ascii=False) + ";\n", encoding="utf-8")
     (VERI / "boun.js").write_text("window.VERI.satirlar.push(..." + json.dumps(boun, ensure_ascii=False, separators=(",", ":")) + ");\n", encoding="utf-8")
     print(f"BOUN: {len(boun)} cümle")

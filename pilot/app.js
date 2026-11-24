@@ -325,7 +325,8 @@ function tanikSayfasi(id, sorgu) {
       (par.tr ? '<details><summary>Türkçe çeviri · ' + isle(par.tr_kaynak) + '</summary><pre>' + isle(par.tr) + '</pre></details>' : '<p class="not">Türkçe: ' + isle(par.tr_kaynak) + '</p>') : '') +
     '<h2>Kaynak</h2><dl class="kunye"><dt>Eser</dt><dd>Codex Cumanicus II</dd><dt>Neşir</dt><dd>Argunşah &amp; Güner 2015, Kesit</dd>' +
     (s.bs ? '<dt>Bölüm</dt><dd>' + isle(s.bs.replace(/\d+$/, '')) + '</dd>' : '') + (s.b ? '<dt>Yaprak aralığı</dt><dd>' + isle(s.b) + '</dd>' : '') +
-    '<dt>Sayfa</dt><dd>' + sayfaEtiketi(s) + ' · PDF s. ' + s.pdf + '</dd><dt>Katman</dt><dd>' + s.k + (s.dz ? ' · <b>OCR düzeltmesi:</b> ' + isle(s.dz) : ' (ABBYY OCR)') + '</dd></dl>' +
+    '<dt>Sayfa</dt><dd>' + sayfaEtiketi(s) + ' · PDF s. ' + s.pdf + '</dd><dt>Katman</dt><dd>' + s.k + (s.dz ? ' · <b>OCR düzeltmesi:</b> ' + isle(s.dz) : ' (ABBYY OCR)') + '</dd>' +
+    ((VERI.inceleme || {})[s.id] ? '<dt>İnceleme</dt><dd>Ünsal 2019, <i>Codex Cumanicus\'un Söz Dizimi</i> (YL tezi, Erciyes Ü.), s. ' + VERI.inceleme[s.id].join(', ') + '</dd>' : '') + '</dl>' +
     '<p class="ust-bosluk"><a class="dugme" href="#/etiketle/' + s.id + '">Bu satırı UD ile etiketle</a></p>' +
     '<h2>Kalıcı adres</h2><div class="adres"><input readonly value="' + isle(adres) + '" aria-label="Kalıcı adres"><button id="kopyala">Kopyala</button></div>' +
     '<h2>Atıf</h2><div class="adres"><input readonly id="atif" value="' + isle(atifMetni(s, adres)) + '" aria-label="Atıf"><button id="atifkopyala">Atıf kopyala</button></div>' +
